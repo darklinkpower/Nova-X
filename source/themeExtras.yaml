@@ -1,0 +1,7 @@
+ThemeId: Stardust 2.0_1fb333b2-255b-43dd-aec1-8e2f2d5ea002
+PersistentPaths:
+- Images/Banners
+BannersBySpecIdPath: Images/Banners/PlatformSpecId
+BannersByPlatformNamePath: Images/Banners/PlatformName
+BannersByPluginIdPath: Images/Banners/PluginId
+DefaultBannerPath: Images/Banners/UnknownLibrary.png
