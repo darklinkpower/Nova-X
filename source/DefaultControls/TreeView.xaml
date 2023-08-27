@@ -30,7 +30,7 @@
 
     <Style TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
         <Setter Property="Padding" Value="0,2,30,2" />
@@ -94,11 +94,11 @@
                             <Setter Property="Visibility" Value="Hidden" TargetName="Expander" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                             <Setter Property="TextBlock.FontWeight" Value="Bold" TargetName="PART_Header" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True" SourceName="SelectionBorder">
-                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

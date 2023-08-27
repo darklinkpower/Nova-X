@@ -197,15 +197,15 @@
                             <Setter Property="Visibility" Value="Visible" TargetName="GlowPlayingBorder" />
                         </MultiDataTrigger>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
-                            <Setter Property="Padding" Value="2,5,2,5" TargetName="ShowGameName" />
+                            <Setter Property="Padding" Value="3,5,3,5" TargetName="ShowGameName" />
                             <Setter Property="TextAlignment" Value="Center" TargetName="ShowGameName" />
-                            <Setter Property="Background" Value="{DynamicResource GridViewCoverSelectionBrush}" TargetName="ShowGameNameBorder" />
+                            <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" TargetName="ShowGameNameBorder" />
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ElementName=Mask, Path=Tag}" Value="True">
                             <Setter Property="CornerRadius" Value="{DynamicResource GridViewShowGameNameCornerRadius}" TargetName="ShowGameNameBorder" />
                         </DataTrigger>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="False">
-                            <Setter Property="Content" Value="&#xef08;" TargetName="PART_ButtonPlay" />
+                            <Setter Property="Content" Value="&#xE896;" TargetName="PART_ButtonPlay" />
                         </DataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>

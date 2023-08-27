@@ -137,7 +137,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Border.Visibility" Value="Visible" TargetName="IconBackground"/>
-                            <Setter Property="Border.Background" Value="{DynamicResource OpaqueHighlightBrushBright}" TargetName="IconBackground"/>
+                            <Setter Property="Border.Background" Value="{DynamicResource OpaqueGrayHighlightBrush}" TargetName="IconBackground"/>
                             <Setter Property="Border.Opacity" Value="1" TargetName="IconBackground"/>
                             <Setter Property="Effect" Value="{StaticResource glowEffect}" />
                             <Trigger.EnterActions>
@@ -165,7 +165,7 @@
                         </Trigger>
                         <DataTrigger Binding="{Binding IsCurrent}" Value="True">
                             <Setter Property="Border.Visibility" Value="Visible" TargetName="IconBackground"/>
-                            <Setter Property="Border.Background" Value="{DynamicResource OpaqueHighlightBrush}" TargetName="IconBackground"/>
+                            <Setter Property="Border.Background" Value="{DynamicResource OpaqueGrayHighlightBrush}" TargetName="IconBackground"/>
                             <Setter Property="Border.Opacity" Value="1" TargetName="IconBackground"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>

@@ -27,12 +27,11 @@
                             </Style>
                         </Border.Style>
                         <Grid>
-                            <DockPanel>
+                            <DockPanel Margin="5,0,5,10">
                                 <ComboBox Name="PART_SelectFields"
-                                          Background="Transparent"
-                                          DockPanel.Dock="Top" Margin="5,0,5,8" />
+                                          DockPanel.Dock="Top" Margin="0" />
                                 <ListBox Name="PART_SelectItems"
-                                     DockPanel.Dock="Top" Margin="0,0,5,8"                                      
+                                     DockPanel.Dock="Top" Margin="0,10,0,0"                                      
                                      BorderThickness="0" Background="Transparent"
                                      ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                                 </ListBox>

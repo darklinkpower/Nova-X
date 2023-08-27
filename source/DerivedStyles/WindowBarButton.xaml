@@ -13,7 +13,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <TextBlock FontFamily="Marlett"
+                    <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
                                FontSize="16"
                                Padding="{TemplateBinding Padding}"
@@ -35,11 +35,13 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-        <Setter Property="Padding" Value="8,5,3,3" />
+        <Setter Property="Padding" Value="8,15,3,3" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="VerticalContentAlignment" Value="Top" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="MinWidth" Value="45" />
         <Setter Property="Height" Value="34" />
@@ -48,13 +50,13 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="ControlBorder" CornerRadius="5,0,0,5" Cursor="Hand" Background="{TemplateBinding Background}">
-                        <TextBlock FontFamily="Marlett"
+                        <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
                                FontSize="16"
                                Padding="{TemplateBinding Padding}"
-                               Text="{TemplateBinding Content}" 
+                               Text="{TemplateBinding Content}"
                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                               HorizontalAlignment="{TemplateBinding HorizontalAlignment}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -70,7 +72,7 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-        <Setter Property="Padding" Value="6,9,3,3" />
+        <Setter Property="Padding" Value="6,9,6,3" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
@@ -84,7 +86,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="ControlBorder" CornerRadius="0,0,0,0" Background="{TemplateBinding Background}">
-                        <TextBlock FontFamily="Marlett"
+                        <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
                                FontSize="16"
                                Padding="{TemplateBinding Padding}"
@@ -106,7 +108,7 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-        <Setter Property="Padding" Value="6,9,8,6" />
+        <Setter Property="Padding" Value="6,9,6,6" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
@@ -120,7 +122,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="ControlBorder" CornerRadius="0,5,5,0" Background="{TemplateBinding Background}">
-                        <TextBlock FontFamily="Marlett"
+                        <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
                                FontSize="16"
                                Padding="{TemplateBinding Padding}"
