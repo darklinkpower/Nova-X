@@ -95,7 +95,7 @@
                             </MultiDataTrigger.ExitActions>
                         </MultiDataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource HoverBrush}" TargetName="SelectionBorder"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource GridViewCoverSelectionBrush}" TargetName="SelectionBorder"/>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource GridViewCoverSelectionBrush}" TargetName="SelectionBorder"/>

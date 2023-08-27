@@ -56,9 +56,11 @@
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="BulletBorder" />
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" TargetName="BulletBorder" />
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="BulletBorder" />
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" TargetName="BulletBorder" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

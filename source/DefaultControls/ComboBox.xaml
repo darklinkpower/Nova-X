@@ -61,9 +61,11 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrushControlsHover}" TargetName="Border" />
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}"/>
                         </Trigger>
                         <Trigger Property="IsDropDownOpen" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}"/> 
                         </Trigger>
                         <Trigger Property="IsEditable" Value="True">
                             <Setter Property="IsTabStop" Value="False" />

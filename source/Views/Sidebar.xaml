@@ -5,11 +5,12 @@
                     mc:Ignorable="d">
     
     <Style TargetType="{x:Type Sidebar}">
+        <Setter Property="Padding" Value="0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Sidebar}">
                     <Border Background="{DynamicResource SidebarBackgroundBrush}" BorderThickness="0,0,0,0" BorderBrush="{DynamicResource SidebarMarginBrush}"
-                            x:Name="BorderContentHolder" Margin="{TemplateBinding Padding}">
+                            x:Name="BorderContentHolder">
                         <DockPanel x:Name="DockContentHolder" MinWidth="44">
                             <Border x:Name="PART_ElemMainMenu" Background="Transparent"
                                     Width="36" Height="36" Margin="2,10,2,25"
@@ -19,11 +20,13 @@
                                        RenderOptions.BitmapScalingMode="Fant" />
                             </Border>
 
-                            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden"
+                            <Border Padding="{TemplateBinding Padding}">
+                                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden"
                                           DockPanel.Dock="Top" CanContentScroll="True"
                                           x:Name="ScrollSidebarItems">
-                                <StackPanel x:Name="PART_PanelSideBarItems" Orientation="Vertical" />
-                            </ScrollViewer>
+                                    <StackPanel x:Name="PART_PanelSideBarItems" Orientation="Vertical" />
+                                </ScrollViewer>
+                            </Border>
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>

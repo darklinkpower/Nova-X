@@ -41,10 +41,9 @@
     </Style>
 
     <Style x:Key="FilterPresetButtonAction" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-        <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
+        <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
         <Setter Property="Padding" Value="5" />
-        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
-        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Margin" Value="3,0,0,0" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="DockPanel.Dock" Value="Right" />
     </Style>
@@ -54,6 +53,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type FilterPanel}">
                     <Border BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                            Background="{DynamicResource DetailsViewGameListBackground}"
                             d:DesignWidth="200">
                         <Border.Style>
                             <Style TargetType="Border">
@@ -68,28 +68,26 @@
                                 </Style.Triggers>
                             </Style>
                         </Border.Style>
-                        <DockPanel Background="{TemplateBinding Background}">
-                            <DockPanel Margin="10,8,5,5" DockPanel.Dock="Top">
-                                <Button Content="r" FontFamily="Marlett"
-                                        Style="{StaticResource SimpleButton}"
+                        <DockPanel Background="{TemplateBinding Background}" Margin="{DynamicResource PanelTopPanelSeparator}">
+                            <DockPanel Margin="10,10,6,0" DockPanel.Dock="Top">
+                                <Button Content="&#xE8BB;" FontFamily="Segoe MDL2 Assets"
                                         DockPanel.Dock="Right" Margin="0,0,5,0"
                                         Name="PART_ButtonClose"/>
                                 <Button DockPanel.Dock="Left" Content="{StaticResource LOCClearFilters}"                                        
                                         HorizontalAlignment="Left"
-                                        Style="{StaticResource SimpleButton}"
                                         Name="PART_ButtonClear"/>
                             </DockPanel>
-                            <DockPanel DockPanel.Dock="Top" Margin="8,0,6,5">
+                            <DockPanel DockPanel.Dock="Top" Margin="10,10,10,0">
                                 <Button x:Name="PART_ButtonDeleteFilter"
-                                        Content="&#xec53;" Style="{DynamicResource FilterPresetButtonAction}" />
+                                        Content="&#xE107;" Style="{DynamicResource FilterPresetButtonAction}" />
                                 <Button x:Name="PART_ButtonRenameFilter"
-                                        Content="&#xec55;" Style="{DynamicResource FilterPresetButtonAction}"/>
+                                        Content="&#xE104;" Style="{DynamicResource FilterPresetButtonAction}"/>
                                 <Button x:Name="PART_ButtonSaveFilter"
-                                        Content="&#xee00;" Style="{DynamicResource FilterPresetButtonAction}" />
+                                        Content="&#xE105;" Style="{DynamicResource FilterPresetButtonAction}" />
                                 <ComboBox x:Name="PART_ComboFilterPresets"
                                           DockPanel.Dock="Left" VerticalAlignment="Center" />
                             </DockPanel>                            
-                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                            <ScrollViewer Margin="5,15,6,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
                                       DockPanel.Dock="Top" Padding="0,0,0,15">
                                 <StackPanel x:Name="PART_PanelItemsHost" />
                             </ScrollViewer>

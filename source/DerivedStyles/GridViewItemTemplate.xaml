@@ -73,7 +73,7 @@
                                                        TextTrimming="CharacterEllipsis" TextAlignment="Center"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Border>
-                                    <Border Background="#000000" x:Name="BorderMouseOver" Visibility="Collapsed" Opacity="0.70" IsHitTestVisible="False" />
+                                    <Border Background="#000000" x:Name="BorderMouseOver" Visibility="Collapsed" Opacity="0.80" IsHitTestVisible="False" />
                                     <Border x:Name="GlowPlayingBorder" Visibility="Collapsed" Tag="False" IsHitTestVisible="False"
                                             Style="{DynamicResource CoverIsPlayingAnimatedBackground}" />
                                     <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed" IsHitTestVisible="False"
@@ -85,11 +85,10 @@
                                 </Grid>
                                 <Border Grid.Row="1" Background="{DynamicResource CoversButtonsBrush}" x:Name="BorderDarkFade" Visibility="Collapsed" />
                                 <TextBlock Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" ClipToBounds="True"
-                                                   Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}"
+                                                   Text="&#xE113;" FontFamily="Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}"
                                                         Opacity="0.90" FontSize="16"
                                                         Margin="8,5,5,5"
                                                         DockPanel.Dock="Right"
-                                                        FontFamily="{DynamicResource FontIcoFont}"
                                                         Tag="{DynamicResource GridViewLibraryGameShowFavorite}">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock" >
@@ -116,11 +115,11 @@
                                                     Name="GameControls"  Visibility="Collapsed">
                                     <StackPanel Orientation="Horizontal">
                                         <Button Name="PART_ButtonPlay" Style="{StaticResource SimpleButton}"
-                                                        Margin="20,0,2,5" VerticalAlignment="Center"
-                                                        Content="&#xec74;" FontFamily="{StaticResource FontIcoFont}" />
+                                                Margin="20,0,2,5" VerticalAlignment="Center"
+                                                Content="&#xE102;" FontFamily="Segoe MDL2 Assets" />
                                         <Button Name="PART_ButtonInfo" Style="{StaticResource SimpleButton}"
-                                                        Margin="2,0,20,5" VerticalAlignment="Center"
-                                                        Content="&#xef4f;" FontFamily="{StaticResource FontIcoFont}" />
+                                                Margin="2,0,20,5" VerticalAlignment="Center"
+                                                Content="&#xE946;" FontFamily="Segoe MDL2 Assets" />
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
@@ -130,7 +129,7 @@
                                                Style="{StaticResource BaseTextBlockStyle}"    
                                                Foreground="White"
                                                TextAlignment="Left" TextTrimming="CharacterEllipsis"
-                                               FontWeight="SemiBold"
+                                               FontWeight="Medium"
                                                VerticalAlignment="Center"
                                                Width="{Settings GridItemWidth}"
                                                Padding="2,8,2,3"
@@ -239,7 +238,7 @@
                                     <Storyboard>
                                         <DoubleAnimation
                                             Storyboard.TargetProperty="Opacity"
-                                            To="0.70" Storyboard.TargetName="BorderMouseOver"
+                                            To="0.80" Storyboard.TargetName="BorderMouseOver"
                                             Duration="0:0:0.30">
                                             <DoubleAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseOut"/>

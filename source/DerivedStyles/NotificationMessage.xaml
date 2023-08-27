@@ -6,19 +6,22 @@
 
     <Style x:Key="NotificationMessage" TargetType="Button">
         <Setter Property="Command" Value="{Binding ActivateCommand}" />
+        <Setter Property="Background" Value="#25282c" />
         <Setter Property="Margin" Value="10,8,10,0" />
         <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="NotificationMessageBorder" d:DataContext="{x:Static DesignMainViewModel.DesignNotificationIntance}"
-                        Style="{DynamicResource HighlightBorder}" Background="{DynamicResource GlyphBrush}" BorderThickness="0">
+                            Style="{DynamicResource HighlightBorder}" Background="{TemplateBinding Background}" BorderThickness="0">
                         <DockPanel>
                             <Button DockPanel.Dock="Right" Padding="6,0,6,0"
-                                    Content="r" FontFamily="Marlett"
+                                    Content="&#xE8BB;" FontFamily="Segoe MDL2 Assets"
                                     VerticalAlignment="Stretch" BorderThickness="0"
                                     Command="{Binding CloseCommand}"/>
                             <TextBlock Text="{Binding Text}"
+                                       FontWeight="{TemplateBinding FontWeight}"
                                        Style="{DynamicResource BaseTextBlockStyle}"
                                        Margin="6,6,0,6" TextWrapping="Wrap"
                                        MinHeight="38" DockPanel.Dock="Left" />
@@ -26,7 +29,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource PurpleButtonBrushHighlight}" TargetName="NotificationMessageBorder"/>
+                            <Setter Property="Background" Value="#3a3e45" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

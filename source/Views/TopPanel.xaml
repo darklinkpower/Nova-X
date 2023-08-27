@@ -6,53 +6,53 @@
                     mc:Ignorable="d">
 
     <DataTemplate x:Key="TopPanelGeneralViewSettingsTemplate">
-        <TextBlock Text="&#xefe2;" FontFamily="{DynamicResource FontIcoFont}" FontSize="18"                   
+        <TextBlock Text="&#xE115;" FontFamily="Segoe MDL2 Assets" FontSize="18"                   
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelFilterPresetsSelectionTemplate">
-        <TextBlock Text="&#xeec0;" FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
+        <TextBlock Text="&#xE12F;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelGroupSettingsTemplate">
-        <TextBlock Text="&#xee03;" FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
+        <TextBlock Text="&#xF168;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelSortSettingsTemplate">
-        <TextBlock Text="&#xE17D;" FontFamily="Segoe UI Symbol" FontSize="16"
+        <TextBlock Text="&#xE174;" FontFamily="Segoe MDL2 Assets" FontSize="16"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelViewSelectionTemplate">
-        <TextBlock Text="&#xeec0;" FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
+        <TextBlock Text="&#xE196;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelSwitchDetailsViewTemplate">
-        <TextBlock Text="&#xE145;" FontFamily="Segoe UI Symbol" FontSize="20"
+        <TextBlock Text="&#xE145;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelSwitchGridViewTemplate">
-        <TextBlock Text="&#xE138;" FontFamily="Segoe UI Symbol" FontSize="20"
+        <TextBlock Text="&#xF0E2;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelSwitchListViewTemplate">
-        <TextBlock Text="&#xE14C;" FontFamily="Segoe UI Symbol" FontSize="20"
+        <TextBlock Text="&#xE14C;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
     
     <DataTemplate x:Key="TopPanelUpdateButtonTemplate">
         <TextBlock Foreground="{DynamicResource WarningBrush}"
                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                   Text="&#xef08;" FontSize="24" FontFamily="{DynamicResource FontIcoFont}"/>
+                   Text="&#xE777;" FontSize="24" FontFamily="Segoe MDL2 Assets"/>
     </DataTemplate>
 
     <DataTemplate x:Key="TopPanelExplorerSwitchTemplate">
-        <TextBlock Text="&#xeeed;" FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
+        <TextBlock Text="&#xECCD;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
 
@@ -67,7 +67,7 @@
     </DataTemplate>
     
     <DataTemplate x:Key="TopPanelSearchButtonTemplate">
-        <TextBlock Text="&#xed12;" FontFamily="{DynamicResource FontIcoFont}" FontSize="20"
+        <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
     
@@ -101,25 +101,20 @@
         <Setter Property="Background" Value="{DynamicResource TopPanelFilterToggleBackgroundBrush}" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="Margin" Value="10,6,0,6" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TopPanelItemForegroundBrush}" />
         <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
                     <Border Background="{TemplateBinding Background}" BorderThickness="0"
                             CornerRadius="3">
                         <StackPanel Orientation="Horizontal" Margin="6,0,6,0">
-                            <Viewbox Margin="3,9,3,9">
-                                <Path Name="IconFilter" RenderTransformOrigin="0.5, 0.5"
-                                      Stroke="{TemplateBinding Foreground}" StrokeThickness="2"
-                                      Data="F1 M 7.9 10.16 C 8.086666 10.373333 8.179998 10.613333 8.179999 10.879999 L 8.179999 18.82 C 8.179998 18.966665 8.233333 19.09 8.34 19.189999 C 8.446667 19.289999 8.573334 19.343332 8.72 19.349998 C 8.866667 19.356667 9 19.306665 9.12 19.199999 L 11.42 16.58 C 11.58 16.393333 11.679999 16.26 11.719999 16.18 C 11.786666 16.059999 11.82 15.926666 11.82 15.78 L 11.82 10.879999 C 11.82 10.613333 11.913332 10.373333 12.099999 10.16 L 18.539999 3.28 C 18.699999 3.106667 18.773333 2.913334 18.76 2.7 C 18.746666 2.486668 18.663334 2.303333 18.51 2.15 C 18.356667 1.996668 18.166666 1.920001 17.940001 1.92 L 2.08 1.92 C 1.853333 1.920001 1.66 1.996668 1.5 2.15 C 1.34 2.303333 1.253333 2.486668 1.24 2.7 C 1.226667 2.913334 1.3 3.106667 1.46 3.28 Z " VerticalAlignment="Center" HorizontalAlignment="Center">
-                                    <Path.RenderTransform>
-                                        <ScaleTransform ScaleX="-1.0"/>
-                                    </Path.RenderTransform>
-                                </Path>
-                            </Viewbox>
+                            <TextBlock Text="&#xE16E;" FontFamily="Segoe MDL2 Assets" FontSize="20"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock Text="{DynamicResource LOCFilterActiveLabel}"
+                                       Foreground="{TemplateBinding Foreground}"
                                        Style="{DynamicResource BaseTextBlockStyle}"
                                        Margin="5,0,5,0" VerticalAlignment="Center"
                                        Name="TextFilter" />
@@ -128,8 +123,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="Tag" Value="{StaticResource True}">
                             <Setter Property="Visibility" Value="Visible" TargetName="TextFilter" />
-                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" TargetName="TextFilter" />
-                            <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}" TargetName="IconFilter" />
+                            <Setter Property="Foreground" Value="{DynamicResource TopPanelItemMouseOverForegroundBrush}"  />
                         </Trigger>
                         <Trigger Property="Tag" Value="{StaticResource False}">
                             <Setter Property="Visibility" Value="Collapsed" TargetName="TextFilter" />
@@ -149,7 +143,7 @@
         <Setter Property="Margin" Value="10,6,0,6" />
         <Setter Property="MinWidth" Value="35" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
@@ -157,11 +151,11 @@
                 <ControlTemplate>
                     <Border Background="Transparent">
                         <Grid>
-                            <TextBlock Text="&#xeea3;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
+                            <TextBlock Text="&#xEA8F;" FontFamily="Segoe MDL2 Assets" FontSize="24"
                                        Foreground="{TemplateBinding Foreground}"
                                        HorizontalAlignment="Center"/>
                             <Border CornerRadius="3" Width="15" Height="15"
-                                    Margin="20,0,0,0" Background="OrangeRed"
+                                    Margin="20,0,0,0" Background="{DynamicResource SecondaryBrush}"
                                     HorizontalAlignment="Right" VerticalAlignment="Bottom">
                                 <TextBlock Text="{Api Notifications.Count}" FontSize="12"
                                            Foreground="{DynamicResource TextBrush}"
@@ -186,8 +180,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TopPanel}">
-                    <StackPanel Background="{DynamicResource TopPanelFadeBackgroundBrush}">
-                        <Border Height="59" Padding="0,6,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                    <StackPanel>
+                        <Border Height="61" Padding="0,12,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             d:DesignWidth="1280"
                             d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
                             <Grid>

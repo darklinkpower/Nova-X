@@ -3,7 +3,7 @@
 
     <Style x:Key="PropertyItemButton" TargetType="Button">
         <Setter Property="FontSize" Value="{DynamicResource FontSize}" />
-        <Setter Property="Margin" Value="0,4,0,4" />
+        <Setter Property="Margin" Value="0,4,8,4" />
         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="Template">
             <Setter.Value>
@@ -11,6 +11,7 @@
                     <TextBlock FontSize="{TemplateBinding FontSize}"
                                Foreground="{TemplateBinding Foreground}"
                                Text="{TemplateBinding Content, Converter={StaticResource ObjectToStringConverter}}"
+                               Style="{DynamicResource HoverNoUnderlineStyle}"
                                TextWrapping="Wrap"/>
                 </ControlTemplate>
             </Setter.Value>
@@ -22,6 +23,51 @@
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="HoverNoUnderlineStyle">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="PropertyItemRoundedPanelButton" TargetType="Button">
+        <Setter Property="FontSize" Value="{DynamicResource FontSize}" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Margin" Value="0,8,4,0" />
+        <Setter Property="Padding" Value="12,5,12,6" />
+        <Setter Property="Background" Value="{DynamicResource DetailsViewPanelPropertyItemButtonBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource DetailsViewPanelTextForegroundBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Margin="{TemplateBinding Margin}">
+                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" CornerRadius="12">
+                            <TextBlock FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}"
+                               Foreground="{TemplateBinding Foreground}"
+                               Text="{TemplateBinding Content, Converter={StaticResource ObjectToStringConverter}}"
+                               TextWrapping="NoWrap"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True" >
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
             </Trigger>
         </Style.Triggers>
     </Style>

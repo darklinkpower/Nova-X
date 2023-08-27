@@ -7,16 +7,17 @@
                     mc:Ignorable="d">
 
     <Style TargetType="{x:Type PathSelectionBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <DockPanel>
                         <Button x:Name="PART_ButtonDirectorySelect" DockPanel.Dock="Right" Margin="5,0,0,0"
-                                Content="&#xec5b;" FontFamily="{StaticResource FontIcoFont}" 
+                                Content="&#xE8B7;" FontFamily="Segoe MDL2 Assets"
                                 MaxHeight="{TemplateBinding ActualHeight}"
                                 ToolTip="{DynamicResource LOCSelectDirectoryTooltip}" />
                         <Button x:Name="PART_ButtonFileSelect" DockPanel.Dock="Right" Margin="5,0,0,0"
-                                Content="&#xef27;" FontFamily="{StaticResource FontIcoFont}"
+                                Content="&#xE1A5;" FontFamily="Segoe MDL2 Assets"
                                 MaxHeight="{TemplateBinding ActualHeight}"
                                 ToolTip="{DynamicResource LOCSelectFileTitle}"/>
                         <Border x:Name="Border" BorderThickness="{TemplateBinding BorderThickness}"
@@ -29,8 +30,13 @@
                         </Border>
                     </DockPanel>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" />
+                        </Trigger>
                         <Trigger Property="IsFocused" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

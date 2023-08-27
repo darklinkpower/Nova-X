@@ -174,12 +174,24 @@
     <Style TargetType="{x:Type ComboBoxList}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Height" Value="24" />
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}"/>
         <Setter Property="Template" Value="{DynamicResource ComboBoxListBaseTemplate}" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
     
     <Style TargetType="{x:Type DdItemListSelectionBox}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Height" Value="24" />
-        <Setter Property="Template" Value="{DynamicResource FilterComboBoxListTemplate}" />        
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}"/>
+        <Setter Property="Template" Value="{DynamicResource FilterComboBoxListTemplate}" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>

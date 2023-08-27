@@ -20,7 +20,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Grid.Resources>      
+                            <Grid.Resources>
                                 <Storyboard x:Key="VisibilityOn">
                                     <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin"
                                                  Storyboard.TargetName="PART_Notifications">
@@ -36,9 +36,6 @@
                                     </ThicknessAnimationUsingKeyFrames>
                                 </Storyboard>
                             </Grid.Resources>
-                            <Grid.Background>
-                                <ImageBrush ImageSource="{ThemeFile 'Images/BackgroundGradient.png'}" Stretch="UniformToFill" popt:Freeze="True"/>
-                            </Grid.Background>
                             <DockPanel>
                                 <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
                                          DockPanel.Dock="{Settings SidebarPosition}" />                             

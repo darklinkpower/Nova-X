@@ -7,10 +7,10 @@
         <Setter Property="Margin" Value="8,0,0,0" />
         <Setter Property="Background" Value="{DynamicResource TopPanelItemBackgroundBrush}" />
         <Setter Property="Focusable" Value="False" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TopPanelItemForegroundBrush}" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Padding" Value="3" />
+        <Setter Property="Padding" Value="1.5" />
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -30,7 +30,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource TopPanelItemMouseOverForegroundBrush}" />
             </Trigger>
             <Trigger Property="IsToggled" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource TopPanelItemMouseOverForegroundBrush}" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>

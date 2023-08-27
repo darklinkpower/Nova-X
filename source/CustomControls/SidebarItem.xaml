@@ -5,13 +5,14 @@
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
-        <Setter Property="Foreground" Value="{DynamicResource SidebarItemForegroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TopPanelItemForegroundBrush}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="BorderThickness" Value="0,0,0,0" />
-        <Setter Property="Margin" Value="0,5,0,0" />
-        <Setter Property="Width" Value="36" />
-	  	<Setter Property="Height" Value="36" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Margin" Value="0,0,0,5" />
+        <Setter Property="Width" Value="40" />
+	  	<Setter Property="Height" Value="40" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
@@ -21,7 +22,8 @@
                                      BorderThickness="0" Background="Transparent"
                                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                         <Border Background="{TemplateBinding Background}"
-                                Padding="{Binding IconPadding}"
+                                CornerRadius="4"
+                                Padding="{TemplateBinding Padding}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 BorderBrush="{TemplateBinding BorderBrush}">
                             <Viewbox>
@@ -34,11 +36,12 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Opacity" Value="0.75" />
+                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
             </Trigger>
             <DataTrigger Binding="{Binding Selected}" Value="True">
                 <Setter Property="BorderBrush" Value="{DynamicResource SidebarMarginBrush}" />
                 <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                <!--<Setter Property="Background" Value="#404143" />-->
             </DataTrigger>
             <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
                 <Setter Property="BorderThickness" Value="0,0,0,0" />

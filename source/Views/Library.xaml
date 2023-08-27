@@ -81,41 +81,12 @@
                             </FadeImage.Style>
                         </FadeImage>
                         
-                        <Border x:Name="NoiseBorder" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False">
-                            <Border.Style>
-                                <Style TargetType="Border">
-                                    <Setter Property="Visibility" Value="Visible" />
-                                    <Setter Property="OpacityMask">
-                                        <Setter.Value>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1.0">
-                                                <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#66000000" Offset="0.2"/>
-                                                    <GradientStop Color="#66000000" Offset="0.8"/>
-                                                </LinearGradientBrush.GradientStops>
-                                            </LinearGradientBrush>
-                                        </Setter.Value>
-                                    </Setter>
-                                    <Style.Triggers>
-                                        <MultiDataTrigger>
-                                            <MultiDataTrigger.Conditions>
-                                                <Condition Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0" />
-                                                <Condition Binding="{Binding ElementName=BlurGameBackground, Path=ActualHeight}" Value="0" />
-                                            </MultiDataTrigger.Conditions>
-                                            <Setter Property="OpacityMask" Value="#33FFFFFF" />
-                                        </MultiDataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Border.Style>
-                        </Border>
-
                         <Grid Grid.RowSpan="2">
                             <DockPanel>
                                 <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
                                                DockPanel.Dock="{Settings ExplorerPanelPosition}"
                                                Width="{Settings ExplorerPanelWitdh}"/>
                                 <FilterPanel x:Name="PART_FilterPanel"
-                                             Margin="{DynamicResource PanelTopPanelSeparator}"
                                              Width="{Settings FilterPanelWitdh}"
                                              DockPanel.Dock="{Settings FilterPanelPosition}"
                                              Visibility="{Settings FilterPanelVisible}" />

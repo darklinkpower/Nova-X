@@ -8,7 +8,7 @@
 
     <Style TargetType="{x:Type Separator}">
         <Setter Property="Background" Value="{DynamicResource PanelSeparatorBrush}" />
-        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Margin" Value="0,0,0,0" />
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -25,7 +25,7 @@
 
     <Style TargetType="{x:Type Menu}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PopupForegroundBrush}" />
         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -168,7 +168,7 @@
     </ControlTemplate>
 
     <Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource BaseStyle}">
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource PopupForegroundBrush}" />
         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment" Value="Stretch"/>
