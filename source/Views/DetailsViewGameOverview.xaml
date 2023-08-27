@@ -83,7 +83,7 @@
                                                     </Image>
 
                                                     <Border DockPanel.Dock="Left"
-                                                    Tag="{DynamicResource DetailsViewDisplayGameNameIfLogoVisible}">
+                                                            Tag="{DynamicResource DetailsViewDisplayGameNameIfLogoVisible}">
                                                         <Border.Style>
                                                             <Style TargetType="Border">
                                                                 <Setter Property="Visibility" Value="Visible" />
@@ -225,10 +225,13 @@
                                                     <RowDefinition Height="*" />
                                                     <RowDefinition Height="Auto" />
                                                 </Grid.RowDefinitions>
-                                                <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl"
-                                                                Grid.Row="0"
-                                                                HorizontalAlignment="Center"
-                                                                Margin="15" />
+                                                <Border Grid.Row="0" Tag="{DynamicResource DetailsViewAllowUseOfLogos}"
+                                                        Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                        HorizontalAlignment="Center"
+                                                        Margin="15">
+                                                    <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" />
+                                                </Border>
+
                                                 <Grid Grid.Row="1"
                                                       HorizontalAlignment="Center">
                                                     <Border Name="Mask"
@@ -277,8 +280,9 @@
                                                     </Grid.OpacityMask>
                                                 </Grid>
                                             </Grid>
-                                            <!--GridConverterGridPanelCloseButton-->
                                         </Grid>
+
+                                        <!--GridConverterGridPanelCloseButton-->
                                     </Grid>
                                     <Border Height="40" Visibility="Hidden" />
                                 </StackPanel>

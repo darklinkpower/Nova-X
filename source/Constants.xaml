@@ -4,14 +4,9 @@
                     xmlns:popt="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
 
     <!--Theme settings region start-->
-    <sys:Double x:Key="LibraryGameBackgroundBlendValue">1.0</sys:Double>
-    <sys:Boolean x:Key="LibraryGameBackgroundBlendWithBackground">True</sys:Boolean>
-    <sys:Boolean x:Key="LibraryGameBackgroundAnimateTransition">False</sys:Boolean>
     <sys:Double x:Key="DetailsViewDetailsMaxWidth">1400</sys:Double>
-    <sys:Boolean x:Key="DetailsViewBackgroundImageUseOpacityMask">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
-    <Visibility x:Key="DetailsViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
     <Visibility x:Key="GridViewCoverSubtitleVisibility">Collapsed</Visibility>
     <Visibility x:Key="GridViewCoverCompStatusSubtitleVisibility">Collapsed</Visibility>
@@ -26,7 +21,6 @@
     <sys:Boolean x:Key="GridViewCoverDisplayDropShadowEffect">False</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
-    <sys:Double x:Key="DetailsBackgroundDarkenLayerOpacity">0.40</sys:Double>
     <sys:Int32 x:Key="GridViewSectionOrderDetails">0</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderVideo">1</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderNotes">2</sys:Int32>
