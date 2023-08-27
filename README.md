@@ -1,4 +1,4 @@
-![DownloadCount](https://img.shields.io/github/downloads/darklinkpower/Stardust/total.svg)
+![DownloadCount](https://img.shields.io/github/downloads/darklinkpower/Nova-X/total.svg)
 # Nova X
 Theme inspired by the Xbox PC app for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mode.
 
@@ -11,7 +11,7 @@ I make extensions and themes to learn, have fun and to give to the community so 
 
 ## Support
 
-- If you found a bug or want to request a feature, please open a new issue in the [Issues Tracker](https://github.com/darklinkpower/Nova X/issues)
+- If you found a bug or want to request a feature, please open a new issue in the [Issues Tracker](https://github.com/darklinkpower/Nova-X/issues)
 - For general support, please contact me in the channel dedicated to themes support in the [Playnite Discord](https://discord.com/channels/365863063296933888/808419347105447957)
 
 ## Theme goals
@@ -26,7 +26,7 @@ I make extensions and themes to learn, have fun and to give to the community so 
 ## Installation
 Option A: Click the `Download` button in the [addon database entry here](https://playnite.link/addons.html#Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad) to start the install process.
 
-Option B: Download the latest packaged `pthm` theme file from the [Releases page](https://github.com/darklinkpower/Nova X/releases/latest) and open it.
+Option B: Download the latest packaged `pthm` theme file from the [Releases page](https://github.com/darklinkpower/Nova-X/releases/latest) and open it.
 
 Option C: Download from the Addons browser in Playnite.
 
@@ -57,23 +57,23 @@ The theme provides extensive support for a wide range of available Playnite exte
 <summary>Settings used in screenshots (Click to expand)</summary>
 
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/settings_01.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/settings_01.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/settings_02.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/settings_02.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/settings_03.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/settings_03.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/settings_04.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/settings_04.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/settings_05.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/settings_05.jpg)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/settings_06.jpg)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/settings_06.jpg)
 </details>
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/screenshot_01.webp)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/screenshot_01.webp)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/screenshot_02.webp)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/screenshot_02.webp)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/screenshot_03.webp)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/screenshot_03.webp)
 
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova X/master/screenshots/screenshot_04.webp)
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/screenshot_04.webp)
