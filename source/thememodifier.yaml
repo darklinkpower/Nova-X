@@ -1,5 +1,6 @@
 Constants:
     - "Details View"
+    - DetailsViewBlurGameBackgroundImage: 'Blur game background image'
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - DetailsViewDetailsMaxWidth(1024,1600): 'Maximum width of details'
     - DetailsViewAllowUseOfLogos: 'Allow use of logos (Requires Extra Metadata Loader extension)'
