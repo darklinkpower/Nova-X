@@ -21,10 +21,11 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="1" CornerRadius="7" Background="{DynamicResource DetailsViewGrouCountBackgroundBrush}" Width="Auto">
+                                    <Border Grid.Column="1" CornerRadius="7" Background="{DynamicResource DetailsViewGrouCountBackgroundBrush}" Width="Auto"
+                                            Padding="7,2,7,2">
                                         <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat={}{0}}"
                                                    Foreground="{DynamicResource DetailsViewGroupCountTextBrush}"
-                                                   FontSize="12" FontWeight="Bold"
+                                                   FontSize="12" FontWeight="Normal"
                                                    VerticalAlignment="Center" HorizontalAlignment="Center"
                                                    Style="{DynamicResource BaseTextBlockStyle}"
                                                    TextAlignment="Center"
@@ -35,7 +36,7 @@
                                 
                                 <TextBlock DockPanel.Dock="Left" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}"
                                            VerticalAlignment="Center" HorizontalAlignment="Left" TextTrimming="CharacterEllipsis"
-                                           TextAlignment="Center" Margin="0,0,5,0" FontWeight="Bold">
+                                           TextAlignment="Center" Margin="0,0,5,0" FontWeight="Medium">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                             <Setter Property="Text" Value="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" />

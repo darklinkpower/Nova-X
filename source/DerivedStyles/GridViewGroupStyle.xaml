@@ -21,7 +21,7 @@
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                             <Setter Property="Text" Value="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" />
-                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="FontWeight" Value="Medium" />
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding Name, Converter={StaticResource ObjectToStringConverter}}" Value="{x:Null}">
                                                     <Setter Property="Text" Value="{DynamicResource LOCNone}" />
@@ -37,10 +37,11 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Grid.Column="0" CornerRadius="7" Background="{DynamicResource DetailsViewGrouCountBackgroundBrush}"  Width="Auto">
+                                    <Border Grid.Column="0" CornerRadius="7" Background="{DynamicResource DetailsViewGrouCountBackgroundBrush}"  Width="Auto"
+                                            Padding="7,2,7,2">
                                         <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat={}{0}}"
                                                Foreground="{DynamicResource DetailsViewGroupCountTextBrush}"
-                                               FontSize="12" FontWeight="Bold"
+                                               FontSize="12" FontWeight="Normal"
                                                VerticalAlignment="Center" HorizontalAlignment="Center"
                                                Style="{DynamicResource BaseTextBlockStyle}"
                                                TextAlignment="Center"

@@ -111,7 +111,7 @@
     <Color x:Key="NormalBorderControlsColor">#6f6d70</Color>
     <Color x:Key="NormalBorderControlsHoverColor">#acabad</Color>
     <Color x:Key="NormalBorderControlsHoverTransparencyColor">#4c919191</Color>
-    <Color x:Key="DetailsViewGrouCountBackgroundColor">#535353</Color>
+    <Color x:Key="DetailsViewGrouCountBackgroundColor">#4c919191</Color>
 
     <Color x:Key="PurpleButtonBrushColor">#b75ecf</Color>
     <Color x:Key="PurpleButtonBrushHighlightColor">#c077d6</Color>
@@ -187,7 +187,7 @@
 
     <SolidColorBrush x:Key="DetailsViewGameListBackground" Color="#101114" />
     <SolidColorBrush x:Key="DetailsViewGrouCountBackgroundBrush" Color="{DynamicResource DetailsViewGrouCountBackgroundColor}" />
-    <SolidColorBrush x:Key="DetailsViewGroupCountTextBrush" Color="#E6000000" />
+    <SolidColorBrush x:Key="DetailsViewGroupCountTextBrush" Color="{DynamicResource TextColor}" />
     
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource PurpleButtonBrushColor}" />
     <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="{DynamicResource ControlsBackgroundColor}" />
