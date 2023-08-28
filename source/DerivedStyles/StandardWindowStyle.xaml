@@ -9,7 +9,8 @@
 
     <Style x:Key="StandardWindowStyle" TargetType="WindowBase">
         <Setter Property="Background" Value="{DynamicResource StandardWindowBackgroundBrush}" />
-        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PopupBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
         <Setter Property="TextOptions.TextRenderingMode" Value="Auto" />
         <Setter Property="WindowChrome.WindowChrome">
