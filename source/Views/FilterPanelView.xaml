@@ -68,30 +68,34 @@
                                 </Style.Triggers>
                             </Style>
                         </Border.Style>
-                        <DockPanel Background="{TemplateBinding Background}" Margin="{DynamicResource PanelTopPanelSeparator}">
-                            <DockPanel Margin="10,10,6,0" DockPanel.Dock="Top">
-                                <Button Content="&#xE8BB;" FontFamily="Segoe MDL2 Assets"
-                                        DockPanel.Dock="Right" Margin="0,0,5,0"
-                                        Name="PART_ButtonClose"/>
-                                <Button DockPanel.Dock="Left" Content="{StaticResource LOCClearFilters}"                                        
-                                        HorizontalAlignment="Left"
-                                        Name="PART_ButtonClear"/>
+                        <Grid>
+                            <Border Background="{DynamicResource NoiseBrush}"
+                                    Opacity="{DynamicResource PanelsNoiseBackgroundOpacity}"/>
+                            <DockPanel Background="{TemplateBinding Background}" Margin="{DynamicResource PanelTopPanelSeparator}">
+                                <DockPanel Margin="10,10,6,0" DockPanel.Dock="Top">
+                                    <Button Content="&#xE8BB;" FontFamily="Segoe MDL2 Assets"
+                                            DockPanel.Dock="Right" Margin="0,0,5,0"
+                                            Name="PART_ButtonClose"/>
+                                    <Button DockPanel.Dock="Left" Content="{StaticResource LOCClearFilters}"
+                                            HorizontalAlignment="Left"
+                                            Name="PART_ButtonClear"/>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top" Margin="10,10,10,0">
+                                    <Button x:Name="PART_ButtonDeleteFilter"
+                                            Content="&#xE107;" Style="{DynamicResource FilterPresetButtonAction}" />
+                                    <Button x:Name="PART_ButtonRenameFilter"
+                                            Content="&#xE104;" Style="{DynamicResource FilterPresetButtonAction}"/>
+                                    <Button x:Name="PART_ButtonSaveFilter"
+                                            Content="&#xE105;" Style="{DynamicResource FilterPresetButtonAction}" />
+                                    <ComboBox x:Name="PART_ComboFilterPresets"
+                                              DockPanel.Dock="Left" VerticalAlignment="Center" />
+                                </DockPanel>
+                                <ScrollViewer Margin="5,15,6,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                                              DockPanel.Dock="Top" Padding="0,0,0,15">
+                                    <StackPanel x:Name="PART_PanelItemsHost" />
+                                </ScrollViewer>
                             </DockPanel>
-                            <DockPanel DockPanel.Dock="Top" Margin="10,10,10,0">
-                                <Button x:Name="PART_ButtonDeleteFilter"
-                                        Content="&#xE107;" Style="{DynamicResource FilterPresetButtonAction}" />
-                                <Button x:Name="PART_ButtonRenameFilter"
-                                        Content="&#xE104;" Style="{DynamicResource FilterPresetButtonAction}"/>
-                                <Button x:Name="PART_ButtonSaveFilter"
-                                        Content="&#xE105;" Style="{DynamicResource FilterPresetButtonAction}" />
-                                <ComboBox x:Name="PART_ComboFilterPresets"
-                                          DockPanel.Dock="Left" VerticalAlignment="Center" />
-                            </DockPanel>                            
-                            <ScrollViewer Margin="5,15,6,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
-                                      DockPanel.Dock="Top" Padding="0,0,0,15">
-                                <StackPanel x:Name="PART_PanelItemsHost" />
-                            </ScrollViewer>
-                        </DockPanel>
+                        </Grid>
                     </Border>                                                       
                 </ControlTemplate>
             </Setter.Value>

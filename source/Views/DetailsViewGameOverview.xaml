@@ -40,7 +40,7 @@
                                         </FadeImage.Style>
                                     </FadeImage>
                                 </Viewbox>
-                                <Border Background="{DynamicResource NoiseBrush}" Opacity="0.015"/>
+                                <Border Background="{DynamicResource NoiseBrush}" Opacity="{DynamicResource BackgroundImageNoiseBackgroundOpacity}"/>
                             </Grid>
 
                             <Grid HorizontalAlignment="Stretch">
@@ -200,23 +200,24 @@
                                                 <Button Name="PART_ButtonMoreActions" Content="&#xE712;" FontFamily="Segoe MDL2 Assets" Margin="0,15,18,0" Style="{DynamicResource MoreActionButtonViews}" />
                                                 <Button x:Name="PART_ButtonEditGame" Content="&#xE70F;" FontFamily="Segoe MDL2 Assets" Margin="0,15,18,0" Focusable="False" Style="{DynamicResource MoreActionButtonViews}" />
                                                 <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="0,15,10,0"
+                                                                Style="{DynamicResource GameDetailsPluginButtonStyle}"
                                                                 Height="54"
-                                                            Visibility="{PluginSettings Plugin=PlayState, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                                Visibility="{PluginSettings Plugin=PlayState, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                                 <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="0,15,10,0"
-                                                            Height="54" MaxWidth="150" DockPanel.Dock="Left"
-                                                            Visibility="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                                <ContentControl x:Name="HowLongToBeat_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0" DockPanel.Dock="Left"
-                                                            Visibility="{PluginSettings Plugin=HowLongToBeat, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                                <ContentControl x:Name="CheckDlc_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0" DockPanel.Dock="Left"
-                                                            Visibility="{PluginSettings Plugin=CheckDlc, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                                <ContentControl x:Name="SuccessStory_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0" DockPanel.Dock="Left"
-                                                            Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                                <ContentControl x:Name="GameActivity_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0" DockPanel.Dock="Left"
-                                                            Visibility="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                                <ContentControl x:Name="SystemChecker_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0" DockPanel.Dock="Left"
-                                                            Visibility="{PluginSettings Plugin=SystemChecker, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                                <ContentControl x:Name="CheckLocalizations_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0" DockPanel.Dock="Left"
-                                                            Visibility="{PluginSettings Plugin=CheckLocalizations, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                                Height="54" MaxWidth="150" DockPanel.Dock="Left"
+                                                                Visibility="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                <ContentControl x:Name="HowLongToBeat_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0"
+                                                                Visibility="{PluginSettings Plugin=HowLongToBeat, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                <ContentControl x:Name="CheckDlc_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0"
+                                                                Visibility="{PluginSettings Plugin=CheckDlc, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                <ContentControl x:Name="SuccessStory_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0"
+                                                                Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                <ContentControl x:Name="GameActivity_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0"
+                                                                Visibility="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                <ContentControl x:Name="SystemChecker_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0"
+                                                                Visibility="{PluginSettings Plugin=SystemChecker, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                <ContentControl x:Name="CheckLocalizations_PluginButton" Height="54" VerticalAlignment="Center" Margin="0,15,10,0"
+                                                                Visibility="{PluginSettings Plugin=CheckLocalizations, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                             </WrapPanel>
                                         </Grid>
                                         <Grid Grid.Column="2">
@@ -432,17 +433,20 @@
                                     </Grid>
                                     
                                 </Border>
-                                <Border Grid.Row="2" Padding="40,20,40,0" Background="{DynamicResource WindowBackgourndBrush}">
-                                    <Border.Resources>
+                                <Grid Grid.Row="2" Background="{DynamicResource WindowBackgourndBrush}">
+                                    <Grid.Resources>
                                         <Style TargetType="Border" x:Key="DetailsPanelRoundedBorder">
                                             <Setter Property="CornerRadius" Value="3" />
                                             <Setter Property="Background" Value="{DynamicResource DetailsViewPanelBackgroundBrush}" />
                                             <Setter Property="Padding" Value="20,14,20,14" />
                                             <Setter Property="Margin" Value="0,0,0,32" />
                                         </Style>
-                                    </Border.Resources>
+                                    </Grid.Resources>
 
-                                    <TabControl Style="{DynamicResource TabControlDetailsView}">
+                                    <Border Background="{DynamicResource NoiseBrush}"
+                                            Opacity="{DynamicResource PanelsNoiseBackgroundOpacity}"/>
+                                    
+                                    <TabControl Style="{DynamicResource TabControlDetailsView}" Margin="40,20,40,0">
                                         <TabControl.Resources>
                                             <Style x:Key="PanelLabel" TargetType="Label">
                                                 <Setter Property="FontSize" Value="{DynamicResource FontSizeLarger}" />
@@ -851,7 +855,7 @@
                                             </Grid>
                                         </TabItem>
                                     </TabControl>
-                                </Border>
+                                </Grid>
                                 
                             </Grid>
                         </Grid>

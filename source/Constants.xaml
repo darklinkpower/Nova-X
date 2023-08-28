@@ -47,6 +47,9 @@
     <sys:Double x:Key="FontSizeLarge">15</sys:Double>
     <sys:Double x:Key="FontSizeLarger">20</sys:Double>
     <sys:Double x:Key="FontSizeLargest">29</sys:Double>
+    <sys:Double x:Key="PanelsNoiseBackgroundOpacity">0.01</sys:Double>
+    <sys:Double x:Key="StandardWindowNoiseBackgroundOpacity">0.01</sys:Double>
+    <sys:Double x:Key="BackgroundImageNoiseBackgroundOpacity">0.015</sys:Double>
     <FontFamily x:Key="FontFamily">Segoe UI</FontFamily>
     <FontFamily x:Key="MonospaceFontFamily">Consolas</FontFamily>
     <Thickness x:Key="PopupMenuPadding">0,10,0,10</Thickness>
@@ -101,7 +104,8 @@
     <Color x:Key="PopupBorderColor">#63676869</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
-    <Color x:Key="PanelSeparatorColor">#5f6062</Color>
+    <Color x:Key="PopupSeparatorColor">#5f6062</Color>
+    <Color x:Key="PanelSeparatorColor">#24262a</Color>
     <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
 
     <Color x:Key="NormalBorderControlsColor">#6f6d70</Color>
@@ -130,8 +134,11 @@
 
     <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
     <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
-    <Color x:Key="ControlsBackgroundColor">#303030</Color>
 
+
+    <Color x:Key="ControlsBackgroundColor">#303030</Color>
+    <Color x:Key="ControlMouserOverBackgroundColor">#454545</Color>
+    
     <Color x:Key="TopPanelItemBackgroundColor">#303030</Color>
     <Color x:Key="TopPanelItemHoverBackgroundColor">#303030</Color>
     <Color x:Key="TopPanelSearchBoxBackgroundColor">#303030</Color>
@@ -147,7 +154,7 @@
 
     <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#1e1e1e" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
-    <SolidColorBrush x:Key="ControlMouserOverBackgroundBrush" Color="#454545" />
+    <SolidColorBrush x:Key="ControlMouserOverBackgroundBrush" Color="{DynamicResource ControlMouserOverBackgroundColor}" />
     <SolidColorBrush x:Key="ProgressBarBackgroundBrush" Color="#2e2c2f" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
@@ -163,6 +170,7 @@
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#2e2c2f" />
     <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource GridItemBackgroundColor}" />
     <SolidColorBrush x:Key="PanelSeparatorBrush" Color="{DynamicResource PanelSeparatorColor}" />
+    <SolidColorBrush x:Key="PopupSeparatorBrush" Color="{DynamicResource PopupSeparatorColor}" />
     <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource WindowPanelSeparatorColor}" />
     <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
     <SolidColorBrush x:Key="PopupForegroundBrush" Color="{DynamicResource PopupForegroundColor}" />
@@ -182,8 +190,8 @@
     <SolidColorBrush x:Key="DetailsViewGroupCountTextBrush" Color="#E6000000" />
     
     <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource PurpleButtonBrushColor}" />
-    <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="{DynamicResource PurpleButtonBrushHighlightColor}" />
-    <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="{DynamicResource PurpleButtonBrushSelectedColor}" />
+    <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="{DynamicResource ControlsBackgroundColor}" />
+    <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="{DynamicResource ControlMouserOverBackgroundColor}" />
 
     <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="{DynamicResource ToggleButtonNotCheckedColor}" />
     <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="{DynamicResource ToggleButtonNotCheckedBorderColor}" />
@@ -207,7 +215,7 @@
     <SolidColorBrush x:Key="TitleWindowCloseHover" Color="{DynamicResource TitleWindowCloseHoverColor}" />
 
     <SolidColorBrush x:Key="OpaqueHighlightBrush" Color="{DynamicResource GlyphColor}" Opacity="0.5"/>
-    <SolidColorBrush x:Key="OpaqueHighlightBrushBright" Color="{DynamicResource PurpleButtonBrushHighlightColor}" Opacity="0.5"/>
+    <SolidColorBrush x:Key="OpaqueHighlightBrushBright" Color="{DynamicResource ControlsBackgroundColor}" Opacity="0.5"/>
     <SolidColorBrush x:Key="OpaqueGrayHighlightBrush" Color="{DynamicResource NormalBorderControlsHoverTransparencyColor}" />
 
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
@@ -262,13 +270,17 @@
     <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#00d492" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#f0a300" />
 
-    <SolidColorBrush x:Key="GridViewCoverSelectionBrush" Color="#454545" />
+    <SolidColorBrush x:Key="GridViewCoverSelectionBrush" Color="#3Bf6f3e9" />
+    <!--Background  #101114 (16, 17, 20), Target #454545 (69, 69, 69)-->
+
     <SolidColorBrush x:Key="GridViewCoverSubtitleBrush" Color="#b7b7b7" />
     <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
 
     <SolidColorBrush x:Key="DetailsViewInstalledTextForegroundBrush" Color="#e6e6e6" />
-    <SolidColorBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" Color="#454545" />
-    <SolidColorBrush x:Key="DetailsViewLibrarySelectedBackgroundBrush" Color="#454545" />
+
+    <SolidColorBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" Color="#3Bf6f3e9" />
+    <SolidColorBrush x:Key="DetailsViewLibrarySelectedBackgroundBrush" Color="#3Bf6f3e9" />
+    <!--Background  #101114 (16, 17, 20), Target #454545 (69, 69, 69)-->
     
     <SolidColorBrush x:Key="SearchWindowBackgroundBrush" Color="#3c3a3d" />
     <SolidColorBrush x:Key="SearchWindowSearchTextForegroundBrush" Color="#cac9cb" />

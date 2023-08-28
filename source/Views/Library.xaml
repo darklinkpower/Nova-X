@@ -22,13 +22,35 @@
                                    ImageDarkeningBrush="#990E0E0E"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
+                        
                         <Border Grid.RowSpan="2"
                                 Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
                                 Background="{DynamicResource DarkNoiseBrush}"
                                 Opacity="0.5"/>
+                        
+                        <Border Grid.RowSpan="2"
+                                x:Name="ImageBackgroundNoise"
+                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                Background="{DynamicResource NoiseBrush}"
+                                Opacity="{DynamicResource BackgroundImageNoiseBackgroundOpacity}"/>
+                        <TextBlock Tag="s"
+                                   Visibility="Collapsed" />
+
                         <Border Grid.RowSpan="2"
                                 Background="{DynamicResource NoiseBrush}"
-                                Opacity="0.015"/>
+                                Opacity="{DynamicResource PanelsNoiseBackgroundOpacity}">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=ImageBackgroundNoise, Path=Visibility}" Value="Visible">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                        </Border>
+                        
                         <Grid Grid.RowSpan="2">
                             <DockPanel>
                                 <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
