@@ -43,7 +43,7 @@
                                        Opacity="0.90"
                                        RenderOptions.BitmapScalingMode="Fant" Margin="5,0,5,0" />
                                 <TextBlock Name="PART_ElemHiddenStatus"
-                                           Text="&#xef22;" FontFamily="{StaticResource FontIcoFont}" FontSize="16"
+                                           Text="&#xF78D;" FontFamily="Segoe MDL2 Assets" FontSize="16"
                                            VerticalAlignment="Center" Margin="5,0,5,0" />
                             </StackPanel>
 
@@ -118,7 +118,7 @@
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding}" TextTrimming="CharacterEllipsis" MaxWidth="100" Margin="0,0,4,0"/>
-                        <TextBlock Text="&#xeee4;" FontFamily="{StaticResource FontIcoFont}" />
+                        <TextBlock Text="&#xE8BB;" FontFamily="Segoe MDL2 Assets" />
                     </StackPanel>
                 </DataTemplate>
             </Setter.Value>
@@ -128,7 +128,7 @@
     <Style x:Key="SearchWindowActionButton" TargetType="ToggleButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />        
         <Setter Property="Margin" Value="5,0,5,0" />
-        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Padding" Value="16,8,16,8" />
         <Setter Property="Background" Value="Transparent" />
     </Style>
@@ -139,8 +139,8 @@
         <Setter Property="Margin" Value="10,0,5,0" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Content" Value="&#xef50;" />
-        <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
+        <Setter Property="Content" Value="&#xE946;" />
+        <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
     </Style>
@@ -151,14 +151,13 @@
         <Setter Property="Margin" Value="5,0,5,0" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Content" Value="&#xefb0;" />
-        <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
+        <Setter Property="Content" Value="&#xE115;" />
+        <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
     </Style>
 
     <Style x:Key="SearchWindowStyle" TargetType="WindowBase" BasedOn="{StaticResource StandardWindowStyle}">
-        <Setter Property="Background" Value="{DynamicResource SearchWindowBackgroundBrush}" />
         <Setter Property="Width" Value="720" />
         <Setter Property="SizeToContent" Value="Height" />
     </Style>
@@ -169,44 +168,39 @@
                 HorizontalAlignment="Stretch">
             <TextBlock VerticalAlignment="Center"
                        Style="{DynamicResource BaseTextBlockStyle}"
-                       FontWeight="SemiBold" FontSize="{DynamicResource FontSizeLarger}"
+                       FontSize="{DynamicResource FontSizeLarger}"
                        Foreground="{DynamicResource SearchWindowSearchTextForegroundBrush}"
                        Text="{TemplateBinding Content}" Margin="10,0,0,0" />
         </Border>
     </ControlTemplate>
 
     <Style x:Key="SearchWindowSearchBox" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
-        <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarger}" />
-        <Setter Property="FontWeight" Value="SemiBold" />
-        <Setter Property="Foreground" Value="{DynamicResource SearchWindowSearchTextForegroundBrush}" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
     <Style x:Key="SearchWindowSearchDescription" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
         <Setter Property="Margin" Value="5,0,0,0" />
-        <Setter Property="Foreground" Value="#716f72" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
-        <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
     <Style x:Key="SearchWindowSearchHint" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
         <Setter Property="Margin" Value="10" />
         <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="Foreground" Value="#716f72" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
-        <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
     <Style x:Key="SearchWindowList" TargetType="ListBox" BasedOn="{StaticResource {x:Type ListBox}}">
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
         <Setter Property="BorderThickness" Value="0,1,0,0" />
-        <Setter Property="BorderBrush" Value="#444246" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PanelSeparatorBrush}" />
         <Setter Property="MaxHeight" Value="520" />
-        <Setter Property="Background" Value="#312f33" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="Padding" Value="0,20,0,0" />
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
@@ -225,11 +219,11 @@
                             <ControlTemplate TargetType="{x:Type ListBoxItem}">
                                 <Grid Margin="10,0,5,0">
                                     <Border x:Name="HoverRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                            Background="#3c3a3d" CornerRadius="{DynamicResource ControlCornerRadius}" />
+                                            Background="{DynamicResource DetailsViewLibraryHoverBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" />
                                     <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                            Background="#744780" CornerRadius="{DynamicResource ControlCornerRadius}"/>
+                                            Background="{DynamicResource DetailsViewLibrarySelectedBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}"/>
                                     <Border Padding="{TemplateBinding Padding}" Background="Transparent"
-                                            BorderThickness="0,1,0,0" BorderBrush="#3b393c">
+                                            BorderThickness="0,1,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}">
                                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                               Margin="3,0,0,0" />
@@ -254,7 +248,7 @@
                                             <Condition Property="IsMouseOver" Value="True" />
                                             <Condition Property="Selector.IsSelected" Value="True" />
                                         </MultiTrigger.Conditions>
-                                        <Setter Property="Background" Value="#7a5087" TargetName="SelectedRectangle" />
+                                        <Setter Property="Background" Value="{DynamicResource DetailsViewLibrarySelectedBackgroundBrush}" TargetName="SelectedRectangle" />
                                     </MultiTrigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>

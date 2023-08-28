@@ -7,9 +7,9 @@
                     mc:Ignorable="d">
 
     <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource BaseStyle}">
-        <Setter Property="Background" Value="{DynamicResource ToggleButtonNotCheckedBorderBrush}" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonNotCheckedBorderBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource TextBrushDarker}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="10,5,10,5" />
@@ -27,17 +27,15 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" TargetName="Border"/>
-                            <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
+                            <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" TargetName="Border"/>
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsMouseOver" Value="True" />
                                 <Condition Property="IsChecked" Value="True" />
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" Value="{DynamicResource PurpleButtonBrushHighlight}" TargetName="Border" />
-                            <Setter Property="BorderBrush" Value="{DynamicResource PurpleButtonBrushHighlight}" TargetName="Border" />
+                            <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource ControlBackgroundBrush}" TargetName="Border" />
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
