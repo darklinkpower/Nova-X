@@ -233,6 +233,7 @@
                                                 </Border>
 
                                                 <Grid Grid.Row="1"
+                                                      Visibility="{Settings DetailsVisibility.CoverImage, FallbackValue=Visible, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                       HorizontalAlignment="Center">
                                                     <Border Name="Mask"
                                                             Background="White"
@@ -242,7 +243,7 @@
                                                             <Style TargetType="Border">
                                                                 <Setter Property="Visibility" Value="Visible" />
                                                                 <Style.Triggers>
-                                                                    <DataTrigger Binding="{Binding ElementName=BackgroundChanger_PluginCoverImage, Path=Visibility}" Value="Visible">
+                                                                    <DataTrigger Binding="{Binding ElementName=BackgroundChanger_PluginCoverImage, Path=Visibility, TargetNullValue=Collapsed}" Value="Visible">
                                                                         <Setter Property="Visibility" Value="Collapsed" />
                                                                     </DataTrigger>
                                                                 </Style.Triggers>
@@ -627,40 +628,19 @@
                                                     </Border>
 
                                                     <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
-                                                                    Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                            Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                         <StackPanel Margin="0,15,0,0">
                                                             <Label Style="{DynamicResource PanelLabel}"
                                                                    Content="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}" />
                                                             <ContentControl x:Name="NewsViewer_NewsViewerControl" Margin="0,5,0,5" FontWeight="Normal"/>
                                                         </StackPanel>
                                                     </Border>
-                                                    
-                                                    <Border Visibility="{Binding ElementName=PART_ImageBackground, Path=Visibility}" Style="{DynamicResource DetailsPanelRoundedBorder}">
-                                                        <Grid>
-                                                            <!-- Background Image -->
-                                                            <Grid>
-                                                                <Grid.Style>
-                                                                    <Style TargetType="{x:Type Grid}">
-                                                                        <Setter Property="Visibility" Value="Visible" />
-                                                                        <Style.Triggers>
-                                                                            <MultiDataTrigger>
-                                                                                <MultiDataTrigger.Conditions>
-                                                                                    <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataBackground, FallbackValue=False}" Value="True" />
-                                                                                    <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableBackgroundImage, FallbackValue=False}" Value="True" />
-                                                                                </MultiDataTrigger.Conditions>
-                                                                                <Setter Property="Visibility" Value="Collapsed" />
-                                                                            </MultiDataTrigger>
-                                                                        </Style.Triggers>
-                                                                    </Style>
-                                                                </Grid.Style>
-                                                                <FadeImage x:Name="PART_ImageBackground"
+
+                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
+                                                            Visibility="{Binding ElementName=PART_ImageBackground, Path=Visibility}">
+                                                        <FadeImage x:Name="PART_ImageBackground"
                                                                    Stretch="Uniform"
                                                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
-                                                            </Grid>
-                                                            <!-- BackgroundChanger plugin background -->
-                                                            <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
-                                                                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
-                                                        </Grid>
                                                     </Border>
                                                 </StackPanel>
 
@@ -755,6 +735,7 @@
                                                                      ScrollViewer.VerticalScrollBarVisibility="Auto"
                                                                      BorderThickness="0"
                                                                      AcceptsReturn="True" TextWrapping="Wrap"
+                                                                     Foreground="{DynamicResource DetailsViewPanelTextForegroundBrush}"
                                                                      Margin="-1,5,-1,5" Padding="0" Background="Transparent" FontWeight="Normal"/>
                                                         </StackPanel>
                                                     </Border>
@@ -762,12 +743,6 @@
                                                     <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
                                                             Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                         <StackPanel>
-                                                            <StackPanel.Resources>
-                                                                <Style TargetType="ListBox">
-                                                                    <Setter Property="Background" Value="Transparent" />
-                                                                    <Setter Property="BorderThickness" Value="0" />
-                                                                </Style>
-                                                            </StackPanel.Resources>
                                                             <Label Style="{DynamicResource PanelLabel}"
                                                                    Content="{DynamicResource LOCSuccessStoryAchievements}" />
                                                             <ContentControl x:Name="SuccessStory_PluginProgressBar" />
@@ -866,7 +841,8 @@
                                                         <StackPanel>
                                                             <Label Style="{DynamicResource PanelLabel}"
                                                                    Content="{DynamicResource LOCSsvTitle}" />
-                                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="550"/>
+                                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,0,0" />
+                                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,0,0" Height="550"/>
                                                         </StackPanel>
                                                     </Border>
                                                     
