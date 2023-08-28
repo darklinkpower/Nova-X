@@ -461,7 +461,7 @@
                                                               HtmlFontSize="{DynamicResource FontSize}"
                                                               HtmlFontFamily="{DynamicResource FontFamily}"
                                                               HtmlForeground="{DynamicResource TextColor}"
-                                                              LinkForeground="{DynamicResource GlyphColor}"                                      
+                                                              LinkForeground="{DynamicResource PropertyItemButtonTextColor}"                                      
                                                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                                               ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                                             </StackPanel>

@@ -94,7 +94,7 @@
     <Color x:Key="MainColorDark">#2f3543</Color>
     <Color x:Key="HoverColor">#48494b</Color>
     <Color x:Key="GlyphColor">#c2c2c2</Color>
-    <Brush x:Key="PropertyItemButtonTextColor">#5f9b72</Brush>
+    <Color x:Key="PropertyItemButtonTextColor">#5f9b72</Color>
     <Color x:Key="GlyphColorSecondary">#007738</Color>
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
     <!---->
@@ -144,6 +144,8 @@
     <Color x:Key="TopPanelSearchBoxBackgroundColor">#303030</Color>
     <Color x:Key="TopPanelFilterToggleBackgroundColor">#303030</Color>
 
+    <SolidColorBrush x:Key="PropertyItemButtonTextBrush" Color="{DynamicResource PropertyItemButtonTextColor}" />
+    
     <SolidColorBrush x:Key="TopPanelItemBackgroundBrush" Color="{DynamicResource TopPanelItemBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelSearchBoxBackgroundBrush" Color="{DynamicResource TopPanelSearchBoxBackgroundColor}" />

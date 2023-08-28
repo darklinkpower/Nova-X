@@ -179,7 +179,7 @@
                                                     HtmlFontSize="{DynamicResource FontSize}"
                                                     HtmlFontFamily="{DynamicResource FontFamily}"
                                                     HtmlForeground="#afafaf"
-                                                    LinkForeground="{DynamicResource GlyphColor}"                                      
+                                                    LinkForeground="{DynamicResource PropertyItemButtonTextColor}"                                      
                                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                                     ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                                             </ScrollViewer>
