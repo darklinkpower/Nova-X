@@ -17,7 +17,7 @@
                                   d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}"
                                   x:Name="PART_ScrollViewHost">
                         <Grid Margin="0,0,0,0" x:Name="MainGrid">
-                            <Grid x:Name="NoiseGrid" Height="{Binding ElementName=TopHeader, Path=ActualHeight}"
+                            <Grid x:Name="BackgroundImageGrid" Height="{Binding ElementName=TopHeader, Path=ActualHeight}"
                                   HorizontalAlignment="Center"
                                   VerticalAlignment="Top">
                                 <Viewbox Stretch="UniformToFill" >
@@ -60,12 +60,17 @@
                                     <FadeImage x:Name="PART_ImageBackground"
                                                Stretch="UniformToFill"
                                                HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+                                    <Border Background="#99000000"
+                                            Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}" />
+
                                     <Border Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
                                             Background="{DynamicResource DarkNoiseBrush}"
-                                            Opacity="0.7"/>
+                                            Opacity="0.3"/>
                                 </Grid>
 
-                                <Border Background="{DynamicResource NoiseBrush}" Opacity="{DynamicResource BackgroundImageNoiseBackgroundOpacity}"/>
+                                <Border Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                        Background="{DynamicResource NoiseBrush}" Opacity="{DynamicResource BackgroundImageNoiseBackgroundOpacity}"/>
                             </Grid>
 
                             <Grid HorizontalAlignment="Stretch">
