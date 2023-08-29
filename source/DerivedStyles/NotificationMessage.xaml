@@ -9,7 +9,6 @@
         <Setter Property="Background" Value="#25282c" />
         <Setter Property="Margin" Value="10,8,10,0" />
         <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
