@@ -27,15 +27,15 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" TargetName="Border"/>
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" TargetName="Border"/>
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsMouseOver" Value="True" />
                                 <Condition Property="IsChecked" Value="True" />
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" TargetName="Border" />
-                            <Setter Property="BorderBrush" Value="{DynamicResource ControlBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource ControlMouserOverBackgroundBrush}" TargetName="Border" />
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
