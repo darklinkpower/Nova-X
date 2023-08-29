@@ -6,3 +6,14 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.0/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_0.pthm
     Changelog:
       - 'Initial release'
+  - Version: 1.1
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-08-29
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.1/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_1.pthm
+    Changelog:
+      - 'Add border to windows'
+      - 'Changed text color of links in game description'
+      - 'Details View: Add option in ThemeModifier extension to disable game background image blur'
+      - 'Details View: Adjustments background image darkening and noise layers'
+      - 'NotificationMessage: Decrease font weight'
+      - 'SearchView style changes'
