@@ -24,6 +24,8 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{TemplateBinding Background}">
                             <Grid>
+                                <Border Background="{DynamicResource NoiseBrush}"
+                                        Opacity="{DynamicResource PanelsNoiseBackgroundOpacity}" />
                                 <ContentPresenter Margin="0,0,0,0"/>
                                 <DockPanel DockPanel.Dock="Top" LastChildFill="False">
                                     <DockPanel DockPanel.Dock="Top" LastChildFill="False">
