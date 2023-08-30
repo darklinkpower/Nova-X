@@ -98,18 +98,39 @@
             <Grid Grid.Column="3" Margin="0,0,5,0">
                 <TextBlock FontFamily="Marlett" Text="4" VerticalAlignment="Center" Style="{DynamicResource BaseTextBlockStyle}" />
             </Grid>
-            <Popup IsOpen="{Binding Path=IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right"
+            <Popup x:Name="Popup" IsOpen="{Binding Path=IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right"
                    Focusable="False" AllowsTransparency="True">
-                <Border BorderBrush="{DynamicResource PopupBorderBrush}" Background="{DynamicResource PopupBackgroundBrush}"
-                        CornerRadius="{DynamicResource PopupCornerRadius}" Padding="{DynamicResource PopupMenuPadding}"
-                        BorderThickness="{DynamicResource PopupBorderThickness}">
-                    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                        <StackPanel Grid.IsSharedSizeScope="True" IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
-                    </ScrollViewer>
-                </Border>
+                <StackPanel Orientation="Horizontal">
+                    <Border x:Name="PopupAnimationBorder1" />
+                    <Border x:Name="PopupBorder" BorderBrush="{DynamicResource PopupBorderBrush}" Background="{DynamicResource PopupBackgroundBrush}"
+                            CornerRadius="{DynamicResource PopupCornerRadius}" Padding="{DynamicResource PopupMenuPadding}"
+                            BorderThickness="{DynamicResource PopupBorderThickness}">
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                            <StackPanel Grid.IsSharedSizeScope="True" IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
+                        </ScrollViewer>
+                    </Border>
+                    <Border x:Name="PopupAnimationBorder2" />
+                </StackPanel>
             </Popup>
         </Grid>
         <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding ElementName=Popup, Path=IsOpen}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="PopupBorder" Storyboard.TargetProperty="Opacity"
+                                             FillBehavior="HoldEnd"
+                                             From="0" To="1" Duration="0:0:0.16"/>
+                            <DoubleAnimation Storyboard.TargetName="PopupAnimationBorder1" Storyboard.TargetProperty="Width"
+                                             FillBehavior="HoldEnd"
+                                             From="7" To="0" Duration="0:0:0.08"/>
+                            <DoubleAnimation Storyboard.TargetName="PopupAnimationBorder2" Storyboard.TargetProperty="Width"
+                                             FillBehavior="HoldEnd"
+                                             From="7" To="0" Duration="0:0:0.08"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
             <Trigger Property="Icon" Value="{x:Null}">
                 <Setter Property="Visibility" Value="Collapsed" TargetName="Icon" />
             </Trigger>
