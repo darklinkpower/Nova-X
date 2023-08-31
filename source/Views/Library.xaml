@@ -17,23 +17,32 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        
-                        <FadeImage x:Name="PART_ImageBackground"
-                                   ImageDarkeningBrush="#990E0E0E"
-                                   Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                   HorizontalAlignment="Center" VerticalAlignment="Top" />
-                        
-                        <Border Grid.RowSpan="2"
-                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                Background="{DynamicResource DarkNoiseBrush}"
-                                Opacity="0.5"/>
 
-                        <Border Grid.RowSpan="2"
-                                x:Name="ImageBackgroundNoise"
-                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                Background="{DynamicResource NoiseBrush}"
-                                Opacity="{DynamicResource BackgroundImageNoiseBackgroundOpacity}"/>
-                        
+                        <Grid Grid.RowSpan="2">
+                            <Grid.Style>
+                                <Style TargetType="Grid">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Settings ViewSettings.GamesViewType}" Value="Details">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                            <FadeImage x:Name="PART_ImageBackground"
+                                       ImageDarkeningBrush="#990E0E0E"
+                                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+                            <Border Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                    Background="{DynamicResource DarkNoiseBrush}"
+                                    Opacity="0.5"/>
+
+                            <Border x:Name="ImageBackgroundNoise"
+                                    Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                    Background="{DynamicResource NoiseBrush}"
+                                    Opacity="{DynamicResource BackgroundImageNoiseBackgroundOpacity}"/>
+                        </Grid>
+
                         <Grid Grid.RowSpan="2">
                             <DockPanel>
                                 <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
