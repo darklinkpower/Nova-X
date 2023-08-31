@@ -674,7 +674,7 @@
 
                                                 <StackPanel Grid.Column="2">
 
-                                                    <Border Visibility="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                    <Border x:Name="VideoFeed" Visibility="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                             Style="{DynamicResource DetailsPanelRoundedBorder}">
                                                         <!-- ExtraMetadataLoader video player -->
                                                         <Grid VerticalAlignment="Center">
