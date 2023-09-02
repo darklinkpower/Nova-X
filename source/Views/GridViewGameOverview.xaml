@@ -11,26 +11,12 @@
                 <ControlTemplate TargetType="{x:Type GridViewGameOverview}">
                     <Border Padding="10,0,5,10" BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
-                        <Border.Style>
-                            <Style TargetType="Border">
-                                <Setter Property="BorderThickness" Value="1,0,0,0" />
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Settings GridViewDetailsPosition}" Value="Left">
-                                        <Setter Property="BorderThickness" Value="0,0,1,0" />
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
-                                        <Setter Property="BorderThickness" Value="0" />
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Border.Style>
                         <DockPanel Margin="{DynamicResource PanelTopPanelSeparator}">
                             <Button HorizontalAlignment="Right" VerticalAlignment="Top"
                                     Content="&#xE8BB;" FontFamily="Segoe MDL2 Assets"
                                     Style="{DynamicResource SimpleButton}"
                                     Command="{MainViewModel CloseGameSideBarCommand}"
                                     DockPanel.Dock="Top" Margin="0,10,15,5" />
-
                             <TextBlock Text="{DynamicResource LOCErrorNoGameSelected}"
                                    Margin="0,20,0,0" DockPanel.Dock="Top"
                                    HorizontalAlignment="Center" VerticalAlignment="Center">
