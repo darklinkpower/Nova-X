@@ -65,6 +65,7 @@
                                     <Image Name="PART_ImageIcon" DockPanel.Dock="Left" MaxHeight="32" MaxWidth="32"
                                            RenderOptions.BitmapScalingMode="Fant" Margin="0,0,10,0" />
                                     <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
+                                                    Visibility="{PluginSettings Plugin=NewsViewer, Path=PlayersCountAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                     DockPanel.Dock="Right" VerticalAlignment="Center">
                                         <ContentControl.Resources>
                                             <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
@@ -97,6 +98,7 @@
                                 </DockPanel>
 
                                 <ContentControl DockPanel.Dock="Top" x:Name="DuplicateHider_SourceSelector" 
+                                        Visibility="{PluginSettings Plugin=DuplicateHider, Path=EnableUiIntegration, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                         HorizontalAlignment="Right"
                                         VerticalContentAlignment="Center"   
                                         Margin="0,0,0,0"  

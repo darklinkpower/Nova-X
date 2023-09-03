@@ -147,9 +147,11 @@
                                                             VerticalContentAlignment="Center"   
                                                             Margin="0,0,10,0"  
                                                             Height="24"
+                                                            Visibility="{PluginSettings Plugin=DuplicateHider, Path=EnableUiIntegration, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                             RenderOptions.BitmapScalingMode="Fant" />
 
                                                 <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
+                                                            Visibility="{PluginSettings Plugin=NewsViewer, Path=PlayersCountAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                             Margin="0,0,10,0"
                                                             DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center">
                                                     <ContentControl.Resources>
@@ -475,8 +477,9 @@
 
                                     <Border Background="{DynamicResource NoiseBrush}"
                                             Opacity="{DynamicResource PanelsNoiseBackgroundOpacity}"/>
-                                    
-                                    <TabControl Style="{DynamicResource TabControlDetailsView}" Margin="40,20,40,0">
+
+                                    <TabControl Style="{DynamicResource TabControlDetailsView}" Margin="40,20,40,0"
+                                                Focusable="False">
                                         <TabControl.Resources>
                                             <Style x:Key="PanelLabel" TargetType="Label">
                                                 <Setter Property="FontSize" Value="{DynamicResource FontSizeLarger}" />
