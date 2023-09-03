@@ -161,12 +161,12 @@
 
                                             </WrapPanel>
 
-                                            <StackPanel Grid.Row="1" Name="PART_ElemDevelopers"
-                                                    Orientation="Horizontal" VerticalAlignment="Top">
-                                                <Label Margin="0,0,10,0"
+                                            <DockPanel Grid.Row="1" Name="PART_ElemDevelopers"
+                                                       VerticalAlignment="Top">
+                                                <Label Margin="0,4,10,0"
                                                    FontWeight="Medium"
                                                    Content="{DynamicResource LOCDeveloperLabel}"
-                                                   Foreground="White" VerticalAlignment="Center"/>
+                                                   Foreground="White" VerticalAlignment="Top"/>
                                                 <ItemsControl VerticalAlignment="Center" Name="PART_ItemsDevelopers">
                                                     <ItemsControl.ItemsPanel>
                                                         <ItemsPanelTemplate>
@@ -174,14 +174,14 @@
                                                         </ItemsPanelTemplate>
                                                     </ItemsControl.ItemsPanel>
                                                 </ItemsControl>
-                                            </StackPanel>
+                                            </DockPanel>
 
-                                            <StackPanel Grid.Row="2" Name="PART_ElemPublishers"
-                                                    Orientation="Horizontal" VerticalAlignment="Top">
-                                                <Label Margin="0,0,10,0"
+                                            <DockPanel Grid.Row="2" Name="PART_ElemPublishers"
+                                                       VerticalAlignment="Top">
+                                                <Label Margin="0,4,10,0"
                                                    FontWeight="Medium"
                                                    Content="{DynamicResource LOCPublisherLabel}"
-                                                   Foreground="White" VerticalAlignment="Center"/>
+                                                   Foreground="White" VerticalAlignment="Top"/>
                                                 <ItemsControl VerticalAlignment="Center" Name="PART_ItemsPublishers">
                                                     <ItemsControl.ItemsPanel>
                                                         <ItemsPanelTemplate>
@@ -189,13 +189,13 @@
                                                         </ItemsPanelTemplate>
                                                     </ItemsControl.ItemsPanel>
                                                 </ItemsControl>
-                                            </StackPanel>
-                                            <StackPanel Grid.Row="3" Name="PART_ElemPlatform"
-                                                    Orientation="Horizontal" VerticalAlignment="Top">
-                                                <Label Margin="0,0,10,0"
+                                            </DockPanel>
+                                            <DockPanel Grid.Row="3" Name="PART_ElemPlatform"
+                                                       VerticalAlignment="Top">
+                                                <Label Margin="0,4,10,0"
                                                    FontWeight="Medium"
                                                    Content="{DynamicResource LOCGamePlatformTitle}"
-                                                   Foreground="White" VerticalAlignment="Center"/>
+                                                   Foreground="White" VerticalAlignment="Top"/>
                                                 <ItemsControl VerticalAlignment="Center" Name="PART_ItemsPlatforms">
                                                     <ItemsControl.ItemsPanel>
                                                         <ItemsPanelTemplate>
@@ -203,7 +203,7 @@
                                                         </ItemsPanelTemplate>
                                                     </ItemsControl.ItemsPanel>
                                                 </ItemsControl>
-                                            </StackPanel>
+                                            </DockPanel>
                                             <ScrollViewer Grid.Row="5" Height="110"
                                                       VerticalScrollBarVisibility="Auto">
                                                 <HtmlTextView
