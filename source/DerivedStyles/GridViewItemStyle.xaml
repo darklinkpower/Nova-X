@@ -25,10 +25,11 @@
                                 Width="{Binding ElementName=Content, Path=Width}" Height="{Binding ElementName=Content, Path=Height}"
                                 Visibility="{Binding ElementName=DropShadowVisibilityProxy, Path=Tag, Converter={StaticResource BooleanToVisibilityConverter}}"
                                 Tag="{DynamicResource GridViewCoverUseRoundedCorners}" />
-                        <ContentPresenter x:Name="Content" />
+                        
                         <TextBlock x:Name="ZoomOnHoverProxy" Visibility="Collapsed"
                                    Tag="{DynamicResource GridViewCoverZoomOnHover}" />
-                        <Border x:Name="SelectionBorder" BorderThickness="3" Margin="-3"
+                        <Border x:Name="SelectionBorder" BorderThickness="2" Margin="0"
+                                Padding="3"
                                 Tag="{DynamicResource GridViewCoverUseRoundedCorners}">
                             <Border.Style>
                                 <Style TargetType="Border">
@@ -40,6 +41,8 @@
                                     </Style.Triggers>
                                 </Style>
                             </Border.Style>
+
+                            <ContentPresenter x:Name="Content" />
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -95,10 +98,10 @@
                             </MultiDataTrigger.ExitActions>
                         </MultiDataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource GridViewCoverSelectionBrush}" TargetName="SelectionBorder"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource TextBrush}" TargetName="SelectionBorder"/>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource GridViewCoverSelectionBrush}" TargetName="SelectionBorder"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource TextBrush}" TargetName="SelectionBorder"/>
                             <Setter Property="Canvas.ZIndex" Value="90" />
                         </Trigger>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="False">
