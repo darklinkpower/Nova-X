@@ -6,7 +6,7 @@
 
     <Style x:Key="NotificationMessage" TargetType="Button">
         <Setter Property="Command" Value="{Binding ActivateCommand}" />
-        <Setter Property="Background" Value="#25282c" />
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
         <Setter Property="Margin" Value="10,8,10,0" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
@@ -28,7 +28,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#3a3e45" />
+                            <Setter Property="Background" Value="{DynamicResource ControlMouserOverBackgroundBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
