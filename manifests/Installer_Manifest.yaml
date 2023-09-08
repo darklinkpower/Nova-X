@@ -39,7 +39,15 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.4/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_4.pthm
     Changelog:
       - 'Details View: Changed color of text of uninstalled games'
-      - 'Details View: Fix Developers, Publishers and Platforms items not wrapping when they does not fit in available width'
+      - 'Details View: Fix Developers, Publishers and Platforms items not wrapping when they do not fit in available width'
       - 'Details View: Prevent scrolling when a button is pressed in ExtraMetadataLoader extension video player'
       - 'Grid View: Fix game details panel separator not displaying when using the DetailsToGrid ViewConverter extension'
       - 'Minor fixes'
+  - Version: 1.5
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-09-08
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.5/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_5.pthm
+    Changelog:
+      - 'Grid View: Changed color of game selection border'
+      - 'Explorer Panel: Trim text if it does not fit in available width'
+      - 'Notifications: Changed background color'
