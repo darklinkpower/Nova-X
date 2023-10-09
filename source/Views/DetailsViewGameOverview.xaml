@@ -785,7 +785,9 @@
                                                                      Foreground="{DynamicResource DetailsViewPanelTextForegroundBrush}"
                                                                      Margin="-1,5,-1,5" Padding="0" Background="Transparent" FontWeight="Normal"/>
 
-                                                                <ContentControl x:Name="PlayNotes_NotesViewerControl" Margin="0,10,0,0" />
+                                                                <ContentControl x:Name="PlayNotes_NotesViewerControl"
+                                                                                Visibility="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}"
+                                                                                Margin="0,10,0,0" />
                                                             </StackPanel>
                                                         </Border>
                                                     </Border>
