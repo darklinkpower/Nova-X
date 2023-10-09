@@ -15,7 +15,7 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
-                               FontSize="16"
+                               FontSize="11"
                                Padding="{TemplateBinding Padding}"
                                Text="{TemplateBinding Content}" />
                 </ControlTemplate>
@@ -52,7 +52,7 @@
                     <Border x:Name="ControlBorder" CornerRadius="5,0,0,5" Cursor="Hand" Background="{TemplateBinding Background}">
                         <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
-                               FontSize="16"
+                               FontSize="11"
                                Padding="{TemplateBinding Padding}"
                                Text="{TemplateBinding Content}"
                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
@@ -72,7 +72,7 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-        <Setter Property="Padding" Value="6,9,6,3" />
+        <Setter Property="Padding" Value="6,12,6,3" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
@@ -88,7 +88,7 @@
                     <Border x:Name="ControlBorder" CornerRadius="0,0,0,0" Background="{TemplateBinding Background}">
                         <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
-                               FontSize="16"
+                               FontSize="11"
                                Padding="{TemplateBinding Padding}"
                                Text="{TemplateBinding Content}" 
                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
@@ -108,7 +108,7 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-        <Setter Property="Padding" Value="6,9,6,6" />
+        <Setter Property="Padding" Value="6,12,6,6" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
@@ -124,7 +124,7 @@
                     <Border x:Name="ControlBorder" CornerRadius="0,5,5,0" Background="{TemplateBinding Background}">
                         <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
-                               FontSize="16"
+                               FontSize="11"
                                Padding="{TemplateBinding Padding}"
                                Text="{TemplateBinding Content}" 
                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
