@@ -124,7 +124,7 @@
 
     <Color x:Key="ThumbFillColor">#6f7275</Color>
     <Color x:Key="ThumbFillHoverColor">#8f9495</Color>
-
+    
     <Color x:Key="TextBoxBorderColor">#6f6d70</Color>
     <Color x:Key="TextBoxBorderHoverColor">#acabad</Color>
 
@@ -133,8 +133,8 @@
     <Color x:Key="StandardWindowTitleBackgroundColor">#1a1b1e</Color>
     <Color x:Key="StandardWindowBackgroundColor">#1a1b1e</Color>
 
-    <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
-    <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
+    <Color x:Key="TitleWindowStateHoverColor">#696969</Color>
+    <Color x:Key="TitleWindowCloseHoverColor">#c42b1c</Color>
 
 
     <Color x:Key="ControlsBackgroundColor">#303030</Color>
@@ -263,10 +263,6 @@
     <SolidColorBrush x:Key="DetailsViewPanelsBackgroundBrush" Color="#3374777d" />
     <SolidColorBrush x:Key="DetailsViewDetailsLabelForegroundBrush" Color="#ffffff" />
     <SolidColorBrush x:Key="DetailsViewSeparatorBrush" Color="#4Dc2c2c2" />
-    <LinearGradientBrush x:Key="DetailsViewFadePanelBackgroundBrush" StartPoint="0.5,0.0" EndPoint="0.5,1">
-        <GradientStop Color="#AD414244" Offset="0.4" />
-        <GradientStop Color="#00414244" Offset="0.95" />
-    </LinearGradientBrush>
 
     <SolidColorBrush x:Key="SidebarItemForegroundBrush" Color="{DynamicResource TextColor}" />
 
