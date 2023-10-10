@@ -51,3 +51,13 @@ Packages:
       - 'Grid View: Changed color of game selection border'
       - 'Explorer Panel: Trim text if it does not fit in available width'
       - 'Notifications: Changed background color'
+  - Version: 1.6
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-10
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.6/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_6.pthm
+    Changelog:
+      - 'Add support for Play Notes extension'
+      - 'Details  View: Remove text justify'
+      - 'Details View: Animate background image transition if enabled in Playnite settings'
+      - 'Main Window: Changed color of window buttons'
+      - 'Main Window: Make minimize, maximize and close buttons icons smaller'
