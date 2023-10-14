@@ -133,6 +133,7 @@
     <Color x:Key="StandardWindowTitleBackgroundColor">#1a1b1e</Color>
     <Color x:Key="StandardWindowBackgroundColor">#1a1b1e</Color>
 
+    <Color x:Key="TitleWindowButtonColor">#121315</Color>
     <Color x:Key="TitleWindowStateHoverColor">#696969</Color>
     <Color x:Key="TitleWindowCloseHoverColor">#c42b1c</Color>
 
@@ -214,6 +215,7 @@
     <SolidColorBrush x:Key="StandardWindowTitleBackgroundBrush" Color="{DynamicResource StandardWindowTitleBackgroundColor}" />
     <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="{DynamicResource StandardWindowBackgroundColor}" />
 
+    <SolidColorBrush x:Key="TitleWindowButtonBrush" Color="{DynamicResource TitleWindowButtonColor}" />
     <SolidColorBrush x:Key="TitleWindowStateHover" Color="{DynamicResource TitleWindowStateHoverColor}" />
     <SolidColorBrush x:Key="TitleWindowCloseHover" Color="{DynamicResource TitleWindowCloseHoverColor}" />
 
