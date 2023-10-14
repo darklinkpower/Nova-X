@@ -61,3 +61,12 @@ Packages:
       - 'Details View: Animate background image transition if enabled in Playnite settings'
       - 'Main Window: Changed color of window buttons'
       - 'Main Window: Make minimize, maximize and close buttons icons smaller'
+  - Version: 1.7
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-14
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.7/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_7.pthm
+    Changelog:
+      - 'Details View: Increase maximum value for Details View width option in ThemeModifier extension'
+      - 'Details View: Remove dropshadow effect from game name'
+      - 'TabControl: Make tab items borders rounded'
+      - 'Window: Use rounded corners in windows and visual changes to window buttons'
