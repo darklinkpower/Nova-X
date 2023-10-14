@@ -134,11 +134,7 @@
                                                         <TextBlock FontFamily="{DynamicResource FontFamily}" Name="PART_TextDisplayName"
                                                                    FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0"
                                                                    FontWeight="SemiBold"
-                                                                   TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White">
-                                                            <TextBlock.Effect>
-                                                                <DropShadowEffect ShadowDepth="1" RenderingBias="Quality" Color="#80808080" />
-                                                            </TextBlock.Effect>
-                                                        </TextBlock>
+                                                                   TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" />
                                                     </Border>
 
 
