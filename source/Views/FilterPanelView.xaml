@@ -72,7 +72,7 @@
                             <Border Background="{DynamicResource NoiseBrush}"
                                     Opacity="{DynamicResource PanelsNoiseBackgroundOpacity}"/>
                             <DockPanel Background="{TemplateBinding Background}" Margin="{DynamicResource PanelTopPanelSeparator}">
-                                <DockPanel Margin="10,10,6,0" DockPanel.Dock="Top">
+                                <DockPanel Margin="10,0,6,0" DockPanel.Dock="Top">
                                     <Button Content="&#xE8BB;" FontFamily="Segoe MDL2 Assets"
                                             DockPanel.Dock="Right" Margin="0,0,5,0"
                                             Name="PART_ButtonClose"/>

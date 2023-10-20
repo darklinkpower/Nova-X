@@ -43,7 +43,7 @@
         <Border x:Name="Border">
             <Grid>
                 <Border x:Name="HoverBorder" Background="{DynamicResource HoverBrush}" Visibility="Collapsed"  />
-                <TextBlock VerticalAlignment="Center" Padding="5" Style="{DynamicResource BaseTextBlockStyle}"
+                <TextBlock VerticalAlignment="Center" Padding="6" Style="{DynamicResource BaseTextBlockStyle}"
                            Foreground="{TemplateBinding Foreground}">
                     <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" />
                 </TextBlock>
@@ -115,14 +115,14 @@
             </Grid.ColumnDefinitions>
             <Border x:Name="HoverBorder" Grid.Column="0" Grid.ColumnSpan="4"
                     Background="{DynamicResource HoverBrush}" Visibility="Collapsed"  />
-            <ContentPresenter x:Name="Icon" Grid.Column="0" Margin="4,0,-5,0"
+            <ContentPresenter x:Name="Icon" Grid.Column="0" Margin="10,0,0,0"
                               MaxHeight="16" MaxWidth="16"
                               VerticalAlignment="Center" ContentSource="Icon" />
             <Grid x:Name="GlyphPanel" Grid.Column="0" Visibility="Collapsed"
                   Margin="5,0,-5,0" VerticalAlignment="Center">
                 <TextBlock FontFamily="Marlett" Text="a" VerticalAlignment="Center" Style="{DynamicResource BaseTextBlockStyle}" />
             </Grid>
-            <TextBlock Grid.Column="1" Padding="5" VerticalAlignment="Center" Style="{DynamicResource BaseTextBlockStyle}"
+            <TextBlock Grid.Column="1" Padding="6" VerticalAlignment="Center" Style="{DynamicResource BaseTextBlockStyle}"
                        Foreground="{TemplateBinding Foreground}">
                 <ContentPresenter RecognizesAccessKey="True" Margin="5,0,5,0" ContentSource="Header"/>
             </TextBlock>
@@ -177,13 +177,13 @@
                     <ColumnDefinition Width="*" SharedSizeGroup="MenuItemIGTColumnGroup" />
                     <ColumnDefinition Width="Auto" SharedSizeGroup="MenuItemShortcutColumnGroup" />
                 </Grid.ColumnDefinitions>
-                <ContentPresenter x:Name="Icon" Grid.Column="0" Margin="4,0,-5,0"
+                <ContentPresenter x:Name="Icon" Grid.Column="0" Margin="10,0,-5,0"
                                   MaxHeight="16" MaxWidth="16"
                                   VerticalAlignment="Center" ContentSource="Icon" />
                 <Grid x:Name="GlyphPanel" Grid.Column="0" Visibility="Collapsed" Margin="5,0,-5,0" VerticalAlignment="Center">
                     <TextBlock FontFamily="Marlett" Text="a" VerticalAlignment="Center" Style="{DynamicResource BaseTextBlockStyle}" />
                 </Grid>
-                <TextBlock VerticalAlignment="Center" Grid.Column="1" Margin="5,0,5,0" Padding="5" Style="{DynamicResource BaseTextBlockStyle}"
+                <TextBlock VerticalAlignment="Center" Grid.Column="1" Margin="5,0,15,0" Padding="6" Style="{DynamicResource BaseTextBlockStyle}"
                            Foreground="{TemplateBinding Foreground}">
                     <ContentPresenter RecognizesAccessKey="True" ContentSource="Header"/>
                 </TextBlock>

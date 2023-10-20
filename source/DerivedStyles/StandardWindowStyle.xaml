@@ -33,7 +33,7 @@
                                 <Border Background="{DynamicResource NoiseBrush}"
                                         CornerRadius="8"
                                         Opacity="{DynamicResource StandardWindowNoiseBackgroundOpacity}"/>
-                                <ContentPresenter Margin="0,50,0,0"/>
+                                <ContentPresenter Margin="10,50,10,10"/>
                                 <DockPanel DockPanel.Dock="Top" LastChildFill="False">
                                     <DockPanel DockPanel.Dock="Top" LastChildFill="False">
                                         <TextBlock Text="{TemplateBinding Title}" FontWeight="SemiBold" DockPanel.Dock="Left" Margin="10,15,0,15" VerticalAlignment="Center"
