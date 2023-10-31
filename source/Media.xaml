@@ -20,7 +20,7 @@
     <TextBlock x:Key="InstallSizeIcon" Text="&#xEDA2;" FontFamily="Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
     <TextBlock x:Key="DesktopShortcutIcon" Text="&#xE8F7;" FontFamily="Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
     <TextBlock x:Key="AddFavoritesIcon" Text="&#xE113;" FontFamily="Segoe MDL2 Assets" Foreground="Yellow" FontWeight="Light"/>
-    <TextBlock x:Key="RemoveFavoritesIcon" Text="&#xE195;" FontFamily="Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
+    <TextBlock x:Key="RemoveFavoritesIcon" Text="&#xE195;" FontFamily="Segoe MDL2 Assets" Foreground="Yellow" FontWeight="Light"/>
     <TextBlock x:Key="HideIcon" Text="&#xE7B3;" FontFamily="Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
     <TextBlock x:Key="UnHideIcon" Text="&#xE7B3;" FontFamily="Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
     <TextBlock x:Key="EditGameIcon" Text="&#xE104;" FontFamily="Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
