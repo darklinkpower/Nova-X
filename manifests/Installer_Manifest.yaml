@@ -70,3 +70,12 @@ Packages:
       - 'Details View: Remove dropshadow effect from game name'
       - 'TabControl: Make tab items borders rounded'
       - 'Window: Use rounded corners in windows and visual changes to window buttons'
+  - Version: 1.8
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-30
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.8/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_8.pthm
+    Changelog:
+      - 'Added: Legendary library plugin banner'
+      - 'Improved: performance when rounded corners are enabled'
+      - 'Improved: Tray icon rendering quality'
+      - 'Changed: Make unfavorite icon in game menu yellow'
