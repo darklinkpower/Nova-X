@@ -229,8 +229,13 @@
                                                 <Button Margin="0,15,18,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonContextAction" Style="{DynamicResource ContextButtonViews}" />
                                                 <Button Name="PART_ButtonMoreActions" Content="&#xE712;" FontFamily="Segoe MDL2 Assets" Margin="0,15,18,0" Style="{DynamicResource MoreActionButtonViews}" />
                                                 <Button x:Name="PART_ButtonEditGame" Content="&#xE70F;" FontFamily="Segoe MDL2 Assets" Margin="0,15,18,0" Focusable="False" Style="{DynamicResource MoreActionButtonViews}" />
+                                                <ToggleButton Name="GameFavoriteToggleButton" Margin="0,15,10,0" Focusable="False"
+                                                              Style="{DynamicResource PanelFavoriteToggleButton}"
+                                                              Height="54"
+                                                              Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin}"
+                                                              IsChecked="{PluginSettings Plugin=ThemeExtras, Path=Game.Favorite, Mode=TwoWay, FallbackValue={StaticResource False}}"/>
+                                                
                                                 <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="0,15,10,0"
-                                                                Style="{DynamicResource GameDetailsPluginButtonStyle}"
                                                                 Height="54"
                                                                 Visibility="{PluginSettings Plugin=PlayState, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                                 <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="0,15,10,0"
