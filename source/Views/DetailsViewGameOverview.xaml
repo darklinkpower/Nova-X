@@ -603,10 +603,12 @@
                                                                                 </ItemsPanelTemplate>
                                                                             </ItemsControl.ItemsPanel>
                                                                             <ItemsControl.ItemTemplate>
-                                                                                <DataTemplate>
-                                                                                    <Button Content="{Binding Name}" Style="{StaticResource PropertyItemRoundedPanelButton}"
-                                                                                Command="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=DataContext.SetCategoryFilterCommand}"
-                                                                                CommandParameter="{Binding}"/>
+                                                                                <DataTemplate DataType="{x:Type Link}">
+                                                                                    <Button Content="{Binding Name}"
+                                                                                            Style="{StaticResource PropertyItemRoundedPanelButton}"
+                                                                                            ToolTip="{Binding Url}"
+                                                                                            Command="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=DataContext.SetCategoryFilterCommand}"
+                                                                                            CommandParameter="{Binding}"/>
                                                                                 </DataTemplate>
                                                                             </ItemsControl.ItemTemplate>
                                                                         </ItemsControl>
@@ -642,17 +644,19 @@
                                                                            FontWeight="Medium"
                                                                            Content="{DynamicResource LOCLinksLabel}" />
                                                                     <Grid MinHeight="45">
-                                                                        <ItemsControl ItemsSource="{Binding Game.Links}" Margin="0,0,0,3">
+                                                                        <ItemsControl ItemsSource="{Binding Game.Links}">
                                                                             <ItemsControl.ItemsPanel>
                                                                                 <ItemsPanelTemplate>
                                                                                     <WrapPanel Orientation="Horizontal" VerticalAlignment="Center"/>
                                                                                 </ItemsPanelTemplate>
                                                                             </ItemsControl.ItemsPanel>
                                                                             <ItemsControl.ItemTemplate>
-                                                                                <DataTemplate>
-                                                                                    <Button Content="{Binding Name}" Style="{StaticResource PropertyItemRoundedPanelButton}"
-                                                                                Command="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=DataContext.OpenLinkCommand}"
-                                                                                CommandParameter="{Binding}"/>
+                                                                                <DataTemplate DataType="{x:Type Link}">
+                                                                                    <Button Content="{Binding Name}"
+                                                                                            Style="{StaticResource PropertyItemLinkRoundedPanelButton}"
+                                                                                            ToolTip="{Binding Url}"
+                                                                                            Command="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=DataContext.OpenLinkCommand}"
+                                                                                            CommandParameter="{Binding}"/>
                                                                                 </DataTemplate>
                                                                             </ItemsControl.ItemTemplate>
                                                                         </ItemsControl>
