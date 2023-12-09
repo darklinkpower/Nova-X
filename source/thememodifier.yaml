@@ -1,4 +1,6 @@
 Constants:
+    - "Top Panel"
+    - ShowNavigationButtons: 'Show navigation buttons'
     - "Details View"
     - DetailsViewBlurGameBackgroundImage: 'Blur game background image'
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
