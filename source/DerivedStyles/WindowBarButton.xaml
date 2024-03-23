@@ -65,7 +65,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="ControlBorder" CornerRadius="5,0,0,5" Cursor="Hand" Background="{TemplateBinding Background}">
+                    <Border x:Name="ControlBorder" Cursor="Hand" Background="{TemplateBinding Background}">
                         <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
                                FontSize="11"
@@ -137,7 +137,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="ControlBorder" CornerRadius="0,5,5,0" Background="{TemplateBinding Background}">
+                    <Border x:Name="ControlBorder" Background="{TemplateBinding Background}">
                         <TextBlock FontFamily="Segoe MDL2 Assets"
                                Foreground="{TemplateBinding Foreground}"
                                FontSize="11"
