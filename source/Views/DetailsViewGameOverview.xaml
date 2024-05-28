@@ -834,6 +834,15 @@
                                                     </Border>
 
                                                     <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
+                                                            Visibility="{PluginSettings Plugin=SteamScreenshots, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                        <StackPanel>
+                                                            <Label Style="{DynamicResource PanelLabel}"
+                                                                   Content="{DynamicResource LOC_SteamScreenshots_SteamScreenshotsLabel}" />
+                                                            <ContentControl x:Name="SteamScreenshots_SteamScreenshotsViewControl" Margin="0,10,0,0" />
+                                                        </StackPanel>
+                                                    </Border>
+                                                    
+                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
                                                             Visibility="{Binding ElementName=GameRelationsVisibilityProxy, Path=Tag}">
                                                         <StackPanel>
 
