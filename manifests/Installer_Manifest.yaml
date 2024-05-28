@@ -108,3 +108,9 @@ Packages:
     Changelog:
       - 'Added: support for panel of VNDB Nexus extension. Note: if there is overlap of extension sections, reset the order with the ThemeModifier extension options.'
       - 'Changed: Made progress bar of items in the sidebar smaller'
+  - Version: 1.13
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-05-28
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.13/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_13.pthm
+    Changelog:
+      - 'Added: Support for Steam Screenshots extension'
