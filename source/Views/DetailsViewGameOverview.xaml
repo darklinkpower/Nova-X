@@ -639,7 +639,6 @@
                                                                                 <DataTemplate DataType="{x:Type Link}">
                                                                                     <Button Content="{Binding Name}"
                                                                                             Style="{StaticResource PropertyItemRoundedPanelButton}"
-                                                                                            ToolTip="{Binding Url}"
                                                                                             Command="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=DataContext.SetCategoryFilterCommand}"
                                                                                             CommandParameter="{Binding}"/>
                                                                                 </DataTemplate>
@@ -712,6 +711,15 @@
 
                                                 <StackPanel Grid.Column="2">
 
+                                                    <Border Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                            Style="{DynamicResource DetailsPanelRoundedBorder}">
+                                                        <StackPanel Margin="0,15,0,0">
+                                                            <Label Style="{DynamicResource PanelLabel}"
+                                                                   Content="VNDB" />
+                                                            <ContentControl x:Name="VNDBNexus_VndbVisualNovelViewControl" Margin="0,5,0,5" FontWeight="Normal"/>
+                                                        </StackPanel>
+                                                    </Border>
+                                                    
                                                     <Border x:Name="VideoFeed" Visibility="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                             Style="{DynamicResource DetailsPanelRoundedBorder}">
                                                         <!-- ExtraMetadataLoader video player -->
