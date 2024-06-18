@@ -523,13 +523,13 @@
                                             <Grid Margin="0,32,0,0" MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="32" />
+                                                    <ColumnDefinition Width="52" />
                                                     <ColumnDefinition Width="*" />
                                                 </Grid.ColumnDefinitions>
                                                 <StackPanel Grid.Column="0">
                                                     <StackPanel.Resources>
                                                         <Style TargetType="StackPanel">
-                                                            <Setter Property="Margin" Value="0,0,20,0" />
+                                                            <Setter Property="Margin" Value="0,0,0,0" />
                                                         </Style>
                                                         <Style TargetType="Label">
                                                             <Setter Property="Foreground" Value="{DynamicResource DetailsViewPanelTextForegroundBrush}" />
@@ -801,7 +801,7 @@
                                             <Grid Margin="0,32,0,0" MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="32" />
+                                                    <ColumnDefinition Width="52" />
                                                     <ColumnDefinition Width="*" />
                                                 </Grid.ColumnDefinitions>
                                                 <StackPanel Grid.Column="0">
