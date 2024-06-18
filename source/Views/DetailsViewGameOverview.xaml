@@ -539,9 +539,12 @@
                                                             <Setter Property="Margin" Value="0,3,0,0" />
                                                         </Style>
                                                     </StackPanel.Resources>
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}">
+                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}" Padding="20,14,20,0">
                                                         <Border.Resources>
                                                             <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
+                                                            <Style TargetType="StackPanel">
+                                                                <Setter Property="Margin" Value="0,0,20,14" />
+                                                            </Style>
                                                         </Border.Resources>
                                                         <WrapPanel>
 
@@ -592,9 +595,12 @@
                                                         </WrapPanel>
                                                     </Border>
 
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}">
+                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}" Padding="20,14,20,0">
                                                         <Border.Resources>
                                                             <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
+                                                            <Style TargetType="StackPanel">
+                                                                <Setter Property="Margin" Value="0,0,20,14" />
+                                                            </Style>
                                                         </Border.Resources>
                                                         <WrapPanel>
                                                             <StackPanel Name="PART_ElemRecentActivity">
