@@ -43,7 +43,7 @@
                                     </Style>
                                 </DockPanel.Style>
 
-                                
+
                                 <Grid x:Name="ExtraMetadataLoader_LogoLoaderControlGrid"
                                       DockPanel.Dock="Top" Tag="{DynamicResource GridViewAllowUseOfLogos}">
                                     <Grid.Style>
@@ -96,7 +96,7 @@
                                                    TextWrapping="Wrap" 
                                                    VerticalAlignment="Center" Foreground="White" />
                                     </Border>
-                                    
+
                                 </DockPanel>
 
                                 <ContentControl DockPanel.Dock="Top" x:Name="DuplicateHider_SourceSelector" 
@@ -117,12 +117,12 @@
                                                   MinWidth="20"
                                                   Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin}"
                                                   IsChecked="{PluginSettings Plugin=ThemeExtras, Path=Game.Favorite, Mode=TwoWay, FallbackValue={StaticResource False}}"/>
-                                    
+
                                     <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0"
                                                         Visibility="{PluginSettings Plugin=PlayState, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
 
                                 </StackPanel>
-                                
+
                                 <ScrollViewer DockPanel.Dock="Top" HorizontalAlignment="Stretch"
                                               Margin="0,10,0,0"
                                               HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
@@ -215,14 +215,14 @@
                                                         </StackPanel>
                                                     </Label>
                                                     <TextBlock Name="PART_TextAdded" VerticalAlignment="Center" />
-                                                    
+
                                                     <Label VerticalAlignment="Center" Visibility="{Binding ElementName=CompStatusElemsGrid, Path=Visibility}">
                                                         <StackPanel Orientation="Horizontal">
                                                             <TextBlock Text="&#xF16A;" Style="{StaticResource Icon}" />
                                                             <TextBlock Text="{DynamicResource LOCCompletionStatus}" />
                                                         </StackPanel>
                                                     </Label>
-                                                    
+
                                                     <Grid x:Name="CompStatusElemsGrid" VerticalAlignment="Center">
                                                         <Grid.Style>
                                                             <Style TargetType="Grid">
@@ -240,7 +240,7 @@
                                                                 </Style.Triggers>
                                                             </Style>
                                                         </Grid.Style>
-                                                        
+
                                                         <ContentControl Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
                                                                         HorizontalAlignment="Left"
                                                                         x:Name="ThemeExtras_SettableCompletionStatus">
@@ -254,7 +254,7 @@
                                                             <Button Name="PART_ButtonCompletionStatus" VerticalAlignment="Center" />
                                                         </Border>
                                                     </Grid>
-                                                    
+
 
                                                     <Label Name="PART_ElemInstallDirectory" >
                                                         <StackPanel Orientation="Horizontal">
@@ -279,7 +279,7 @@
                                                         </StackPanel>
                                                     </Label>
                                                     <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
-                                                    
+
                                                     <Label Name="PART_ElemLibrary" >
                                                         <StackPanel Orientation="Horizontal">
                                                             <TextBlock Text="&#xE1D3;" Style="{StaticResource Icon}" />
@@ -430,11 +430,11 @@
                                                             </DataTemplate>
                                                         </ItemsControl.ItemTemplate>
                                                     </ItemsControl>
-                                                    
+
                                                 </GridEx>
                                             </StackPanel>
                                         </Expander>
-                                        
+
                                         <!--#region ExtraMetadataLoader Video Control-->
                                         <TextBlock x:Name="VideoFeedVisibilityProxy"
                                                    Grid.Row="{DynamicResource GridViewSectionOrderVideo}">
@@ -557,7 +557,7 @@
                                                 <ContentControl x:Name="VNDBNexus_VndbVisualNovelViewControl" Margin="0,10,20,0" />
                                             </StackPanel>
                                         </Expander>
-                                        
+
                                         <!--#region SuccessStory-->
                                         <Expander Grid.Row="{DynamicResource GridViewSectionOrderSuccessStory}"
                                                   IsExpanded="True"
@@ -598,66 +598,7 @@
                                                     <ContentControl DockPanel.Dock="Left" x:Name="HowLongToBeat_PluginButton" VerticalAlignment="Top"/>
                                                     <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center"/>
                                                 </DockPanel>
-                                                <GridEx Name="HltbDataGrid" ColumnCount="2"
-                                                        Margin="0,15,0,0"
-                                                        AutoLayoutColumns="2" RowCount="6"
-                                                        Tag="{DynamicResource GridViewShowHltbDataGrid}">
-                                                    <GridEx.Style>
-                                                        <Style>
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            <Style.Triggers>
-                                                                <MultiDataTrigger>
-                                                                    <MultiDataTrigger.Conditions>
-                                                                        <Condition Binding="{PluginSettings Plugin=HowLongToBeat, Path=HasData, FallbackValue=False}" Value="True" />
-                                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag, FallbackValue=False}" Value="True" />
-                                                                    </MultiDataTrigger.Conditions>
-                                                                    <Setter Property="Control.Visibility" Value="Visible" />
-                                                                </MultiDataTrigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </GridEx.Style>
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatMainStory}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=MainStoryFormat, Path=Visibility}" />
-                                                    <TextBlock Name="MainStoryFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=MainStoryFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatMainExtra}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=MainExtraFormat, Path=Visibility}" />
-                                                    <TextBlock Name="MainExtraFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=MainExtraFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatCompletionist}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=CompletionistFormat, Path=Visibility}" />
-                                                    <TextBlock Name="CompletionistFormat"
-                                                           Style="{DynamicResource HltbGridTextStyle}"
-                                                           Text="{PluginSettings Plugin=HowLongToBeat, Path=CompletionistFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatSolo}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=SoloFormat, Path=Visibility}" />
-                                                    <TextBlock Name="SoloFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=SoloFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatCoOp}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=CoOpFormat, Path=Visibility}" />
-                                                    <TextBlock Name="CoOpFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=CoOpFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatVs}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=VsFormat, Path=Visibility}" />
-                                                    <TextBlock Name="VsFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=VsFormat, FallbackValue=--}"/>
-                                                </GridEx>
+                                                <ContentControl ContentTemplate="{DynamicResource HltbDataGridTemplate}" />
                                             </StackPanel>
                                         </Expander>
                                         <!--#endregion -->
@@ -825,7 +766,7 @@
 
                                             </StackPanel>
                                         </Expander>
-                                        
+
                                         <!--#endregion -->
 
                                         <Expander Grid.Row="{DynamicResource GridViewSectionOrderSteamScreenshots}"
@@ -847,24 +788,10 @@
                                 </ScrollViewer>
                             </DockPanel>
                         </DockPanel>
-                    </Border>                    
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
-    <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" x:Key="HltbGridTextStyle">
-        <Setter Property="Margin" Value="20,5,0,5" />
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text, FallbackValue=--}" Value="--">
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-        </Style.Triggers>
-    </Style>
-
-    <Style TargetType="Label" x:Key="HltbGridLabelStyle">
-        <Setter Property="FontSize" Value="{DynamicResource FontSize}"/>
-        <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}"/>
-        <Setter Property="VerticalAlignment" Value="Center" />
-    </Style>
 </ResourceDictionary>

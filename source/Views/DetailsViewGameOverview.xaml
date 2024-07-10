@@ -717,15 +717,6 @@
 
                                                 <StackPanel Grid.Column="2">
 
-                                                    <Border Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
-                                                            Style="{DynamicResource DetailsPanelRoundedBorder}">
-                                                        <StackPanel Margin="0,15,0,0">
-                                                            <Label Style="{DynamicResource PanelLabel}"
-                                                                   Content="VNDB" />
-                                                            <ContentControl x:Name="VNDBNexus_VndbVisualNovelViewControl" Margin="0,5,0,5" FontWeight="Normal"/>
-                                                        </StackPanel>
-                                                    </Border>
-                                                    
                                                     <Border x:Name="VideoFeed" Visibility="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                             Style="{DynamicResource DetailsPanelRoundedBorder}">
                                                         <!-- ExtraMetadataLoader video player -->
@@ -933,52 +924,18 @@
                                                         <StackPanel>
                                                             <Label Style="{DynamicResource PanelLabel}"
                                                                    Content="HowLongToBeat" />
-                                                            <GridEx Name="HltbDataGrid" ColumnCount="2" AutoLayoutColumns="2" RowCount="6" Tag="{DynamicResource DetailsViewShowHltbDataGrid}">
-                                                                <Label Content="{DynamicResource LOCHowLongToBeatMainStory}"
-                                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                                           Visibility="{Binding ElementName=MainStoryFormat, Path=Visibility}" />
-                                                                <TextBlock Name="MainStoryFormat"
-                                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=MainStoryFormat, FallbackValue=--}"/>
-
-                                                                <Label Content="{DynamicResource LOCHowLongToBeatMainExtra}"
-                                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                                           Visibility="{Binding ElementName=MainExtraFormat, Path=Visibility}" />
-                                                                <TextBlock Name="MainExtraFormat"
-                                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=MainExtraFormat, FallbackValue=--}"/>
-
-                                                                <Label Content="{DynamicResource LOCHowLongToBeatCompletionist}"
-                                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                                           Visibility="{Binding ElementName=CompletionistFormat, Path=Visibility}" />
-                                                                <TextBlock Name="CompletionistFormat"
-                                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=CompletionistFormat, FallbackValue=--}"/>
-
-                                                                <Label Content="{DynamicResource LOCHowLongToBeatSolo}"
-                                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                                           Visibility="{Binding ElementName=SoloFormat, Path=Visibility}" />
-                                                                <TextBlock Name="SoloFormat"
-                                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=SoloFormat, FallbackValue=--}"/>
-
-                                                                <Label Content="{DynamicResource LOCHowLongToBeatCoOp}"
-                                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                                           Visibility="{Binding ElementName=CoOpFormat, Path=Visibility}" />
-                                                                <TextBlock Name="CoOpFormat"
-                                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=CoOpFormat, FallbackValue=--}"/>
-
-                                                                <Label Content="{DynamicResource LOCHowLongToBeatVs}"
-                                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                                           Visibility="{Binding ElementName=VsFormat, Path=Visibility}" />
-                                                                <TextBlock Name="VsFormat"
-                                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=VsFormat, FallbackValue=--}"/>
-                                                            </GridEx>
+                                                            <ContentControl ContentTemplate="{DynamicResource HltbDataGridTemplate}" />
                                                         </StackPanel>
                                                     </Border>
 
+                                                    <Border Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                            Style="{DynamicResource DetailsPanelRoundedBorder}">
+                                                        <StackPanel Margin="0,15,0,0">
+                                                            <Label Style="{DynamicResource PanelLabel}"
+                                                                   Content="VNDB" />
+                                                            <ContentControl x:Name="VNDBNexus_VndbVisualNovelViewControl" Margin="0,5,0,5" FontWeight="Normal"/>
+                                                        </StackPanel>
+                                                    </Border>
                                                     
                                                     <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
                                                             Visibility="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
