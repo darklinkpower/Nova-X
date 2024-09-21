@@ -114,3 +114,13 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.13/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_13.pthm
     Changelog:
       - 'Added: Support for Steam Screenshots extension'
+  - Version: 1.14
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-21
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.14/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_14.pthm
+    Changelog:
+      - 'Details View: Fix center separator having different width in details and addons tabs'
+      - 'Details View: Fix score numbers not being aligned to other elements'
+      - 'Details View: Improve margin inside panels with wrappanels'
+      - 'Fixed: HLTB rows showing even if they have no data after its latest update'
+      - 'Reorder ThemeModifier extension sections'
