@@ -570,17 +570,23 @@
 
                                                             <StackPanel Name="PART_ElemCommunityScore">
                                                                 <Label Content="{DynamicResource LOCCommunityScore}" />
-                                                                <TextBlock Name="PART_TextCommunityScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+                                                                <TextBlock Name="PART_TextCommunityScore"
+                                                                           Margin="0,4,0,0"
+                                                                           VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
                                                             </StackPanel>
 
                                                             <StackPanel Name="PART_ElemCriticScore">
                                                                 <Label Content="{DynamicResource LOCCriticScore}" />
-                                                                <TextBlock Name="PART_TextCriticScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+                                                                <TextBlock Name="PART_TextCriticScore"
+                                                                           Margin="0,4,0,0"
+                                                                           VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
                                                             </StackPanel>
 
                                                             <StackPanel Name="PART_ElemUserScore">
                                                                 <Label Content="{DynamicResource LOCUserScore}" />
-                                                                <TextBlock Name="PART_TextUserScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+                                                                <TextBlock Name="PART_TextUserScore"
+                                                                           Margin="0,4,0,0"
+                                                                           VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
                                                             </StackPanel>
 
                                                             <StackPanel Name="PART_ElemAgeRating">
