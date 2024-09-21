@@ -598,7 +598,24 @@
                                                     <ContentControl DockPanel.Dock="Left" x:Name="HowLongToBeat_PluginButton" VerticalAlignment="Top"/>
                                                     <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center"/>
                                                 </DockPanel>
-                                                <ContentControl ContentTemplate="{DynamicResource HltbDataGridTemplate}" />
+                                                <ContentControl ContentTemplate="{DynamicResource HltbDataGridTemplate}"
+                                                                Margin="0,15,0,0"
+                                                                Tag="{DynamicResource GridViewShowHltbDataGrid}">
+                                                    <ContentControl.Style>
+                                                        <Style>
+                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                            <Style.Triggers>
+                                                                <MultiDataTrigger>
+                                                                    <MultiDataTrigger.Conditions>
+                                                                        <Condition Binding="{PluginSettings Plugin=HowLongToBeat, Path=HasData, FallbackValue=False}" Value="True" />
+                                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag, FallbackValue=False}" Value="True" />
+                                                                    </MultiDataTrigger.Conditions>
+                                                                    <Setter Property="Control.Visibility" Value="Visible" />
+                                                                </MultiDataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </ContentControl.Style>
+                                                </ContentControl>
                                             </StackPanel>
                                         </Expander>
                                         <!--#endregion -->
