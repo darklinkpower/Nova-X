@@ -58,16 +58,33 @@
                                         </Style>
                                     </Grid.Style>
 
-                                    <FadeImage x:Name="PART_ImageBackground"
-                                               Stretch="UniformToFill"
-                                               HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                    <Border x:Name="PART_ImageBackground_Wrapper">
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Setter Property="Visibility" Value="Visible" />
+                                                <Style.Triggers>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataBackground, FallbackValue=False}" Value="True" />
+                                                            <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableBackgroundImage, FallbackValue=False}" Value="True" />
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </MultiDataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
 
-                                    <Border Background="#99000000"
-                                            Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}" />
+                                        <FadeImage x:Name="PART_ImageBackground" ClipToBounds="True"
+                                                   Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                    </Border>
 
+                                    <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
+                                                ClipToBounds="True"
+                                                HorizontalAlignment="Center" VerticalAlignment="Top" />
 
-                                    <Border Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                            Background="{DynamicResource DarkNoiseBrush}"
+                                    <Border Background="#99000000" />
+
+                                    <Border Background="{DynamicResource DarkNoiseBrush}"
                                             Opacity="0.3"/>
                                 </Grid>
                                 
