@@ -124,3 +124,10 @@ Packages:
       - 'Details View: Improve margin inside panels with wrappanels'
       - 'Fixed: HLTB rows showing even if they have no data after its latest update'
       - 'Reorder ThemeModifier extension sections'
+  - Version: 1.15
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-26
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.15/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_15.pthm
+    Changelog:
+      - 'Details View: Added support for BackgroundChanger extension background image'
+      - 'Details View: Fix panels beings displayed when inner elements are not visible'
