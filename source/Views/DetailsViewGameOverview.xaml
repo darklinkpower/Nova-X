@@ -539,7 +539,41 @@
                                                             <Setter Property="Margin" Value="0,3,0,0" />
                                                         </Style>
                                                     </StackPanel.Resources>
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}" Padding="20,14,20,0">
+                                                    <Border Padding="20,14,20,0">
+                                                        <Border.Style>
+                                                            <Style BasedOn="{StaticResource DetailsPanelRoundedBorder}" TargetType="Border">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemSource, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemReleaseDate, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemSeries, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemVersion, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemCommunityScore, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemCriticScore, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemUserScore, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemAgeRating, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemRegion, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </Border.Style>
                                                         <Border.Resources>
                                                             <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
                                                             <Style TargetType="StackPanel">
@@ -601,7 +635,29 @@
                                                         </WrapPanel>
                                                     </Border>
 
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}" Padding="20,14,20,0">
+                                                    <Border Padding="20,14,20,0">
+                                                        <Border.Style>
+                                                            <Style BasedOn="{StaticResource DetailsPanelRoundedBorder}" TargetType="Border">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemRecentActivity, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemRecentActivity, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemAdded, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemInstallSize, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemInstallDirectory, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </Border.Style>
                                                         <Border.Resources>
                                                             <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
                                                             <Style TargetType="StackPanel">
@@ -632,7 +688,23 @@
                                                         </WrapPanel>
                                                     </Border>
 
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}">
+                                                    <Border>
+                                                        <Border.Style>
+                                                            <Style BasedOn="{StaticResource DetailsPanelRoundedBorder}" TargetType="Border">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemCategories, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemGenres, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemLinks, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </Border.Style>
                                                         <Grid>
                                                             <StackPanel>
                                                                 <StackPanel Name="PART_ElemCategories" Margin="0,0,0,20">
@@ -735,7 +807,20 @@
                                                         </Grid>
                                                     </Border>
                                                     
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}">
+                                                    <Border>
+                                                        <Border.Style>
+                                                            <Style BasedOn="{StaticResource DetailsPanelRoundedBorder}" TargetType="Border">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemFeatures, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ElemTags, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </Border.Style>
                                                         <StackPanel>
                                                             <StackPanel Name="PART_ElemFeatures">
                                                                 <Label Style="{DynamicResource PanelLabel}"
@@ -782,7 +867,7 @@
                                                     </Border>
 
                                                     <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
-                                                                    Visibility="{PluginSettings Plugin=ReviewViewer, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                            Visibility="{PluginSettings Plugin=ReviewViewer, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                         <StackPanel>
                                                             <Label Style="{DynamicResource PanelLabel}"
                                                                    Content="{DynamicResource LOCReview_Viewer_ReviewsLabel}" />
