@@ -131,3 +131,9 @@ Packages:
     Changelog:
       - 'Details View: Added support for BackgroundChanger extension background image'
       - 'Details View: Fix panels beings displayed when inner elements are not visible'
+  - Version: 1.16
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-28
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.16/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_16.pthm
+    Changelog:
+      - 'Details View: Fix dropshadow effect on cover image causing it to be blurry'
