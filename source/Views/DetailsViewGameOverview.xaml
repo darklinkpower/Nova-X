@@ -219,8 +219,9 @@
                                                     </ItemsControl.ItemsPanel>
                                                 </ItemsControl>
                                             </DockPanel>
-                                            <ScrollViewer Grid.Row="5" Height="{DynamicResource DetailsViewDescriptionHeight}"
-                                                      VerticalScrollBarVisibility="Auto">
+                                            <ScrollViewer Grid.Row="5" MinHeight="110"
+                                                          MaxHeight="{DynamicResource DetailsViewDescriptionMaxHeight}"
+                                                          VerticalScrollBarVisibility="Auto">
                                                 <HtmlTextView
                                                     Name="PART_HtmlDescription"
                                                     HtmlFontSize="{DynamicResource FontSize}"
