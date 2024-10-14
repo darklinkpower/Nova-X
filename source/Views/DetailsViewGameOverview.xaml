@@ -823,6 +823,39 @@
                                                         </Grid>
                                                     </Border>
 
+                                                    <Border>
+                                                        <Border.Style>
+                                                            <Style TargetType="Border">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_TextNotes, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, FallbackValue=False}" Value="True">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </Border.Style>
+                                                        <Border Style="{DynamicResource DetailsPanelRoundedBorder}">
+                                                            <StackPanel>
+                                                                <Label Style="{DynamicResource PanelLabel}"
+                                                                       Content="{DynamicResource LOCNotesLabel}" />
+                                                                <TextBox Name="PART_TextNotes" IsReadOnly="True"
+                                                                     MaxHeight="250"
+                                                                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                                                     BorderThickness="0"
+                                                                     AcceptsReturn="True" TextWrapping="Wrap"
+                                                                     Foreground="{DynamicResource DetailsViewPanelTextForegroundBrush}"
+                                                                     Margin="-1,5,-1,5" Padding="0" Background="Transparent" FontWeight="Normal"/>
+
+                                                                <ContentControl x:Name="PlayNotes_NotesViewerControl"
+                                                                                Visibility="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}"
+                                                                                Margin="0,10,0,0" />
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </Border>
+                                                    
                                                     <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
                                                             Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                         <StackPanel Margin="0,15,0,0">
@@ -972,39 +1005,6 @@
                                                 </Grid.ColumnDefinitions>
                                                 <StackPanel Grid.Column="0">
 
-                                                    <Border>
-                                                        <Border.Style>
-                                                            <Style TargetType="Border">
-                                                                <Setter Property="Visibility" Value="Collapsed" />
-                                                                <Style.Triggers>
-                                                                    <DataTrigger Binding="{Binding ElementName=PART_TextNotes, Path=Visibility}" Value="Visible">
-                                                                        <Setter Property="Visibility" Value="Visible" />
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, FallbackValue=False}" Value="True">
-                                                                        <Setter Property="Visibility" Value="Visible" />
-                                                                    </DataTrigger>
-                                                                </Style.Triggers>
-                                                            </Style>
-                                                        </Border.Style>
-                                                        <Border Style="{DynamicResource DetailsPanelRoundedBorder}">
-                                                            <StackPanel>
-                                                                <Label Style="{DynamicResource PanelLabel}"
-                                                                       Content="{DynamicResource LOCNotesLabel}" />
-                                                                <TextBox Name="PART_TextNotes" IsReadOnly="True"
-                                                                     MaxHeight="250"
-                                                                     ScrollViewer.VerticalScrollBarVisibility="Auto"
-                                                                     BorderThickness="0"
-                                                                     AcceptsReturn="True" TextWrapping="Wrap"
-                                                                     Foreground="{DynamicResource DetailsViewPanelTextForegroundBrush}"
-                                                                     Margin="-1,5,-1,5" Padding="0" Background="Transparent" FontWeight="Normal"/>
-
-                                                                <ContentControl x:Name="PlayNotes_NotesViewerControl"
-                                                                                Visibility="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}"
-                                                                                Margin="0,10,0,0" />
-                                                            </StackPanel>
-                                                        </Border>
-                                                    </Border>
-                                                    
                                                     <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
                                                             Visibility="{Binding ElementName=GameRelationsVisibilityProxy, Path=Tag}">
                                                         <StackPanel>
