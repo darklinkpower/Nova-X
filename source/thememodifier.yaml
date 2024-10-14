@@ -2,6 +2,7 @@ Constants:
     - "Top Panel"
     - ShowNavigationButtons: 'Show navigation buttons'
     - "Details View"
+    - DetailsViewDescriptionHeight(110,400): 'Description Height'
     - DetailsViewBlurGameBackgroundImage: 'Blur game background image'
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - DetailsViewDetailsMaxWidth(1024,2400): 'Maximum width of details'

@@ -38,6 +38,7 @@
     <sys:Boolean x:Key="GridViewCoverZoomOnHover">False</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewBlurGameBackgroundImage">False</sys:Boolean>
     <sys:Boolean x:Key="ShowNavigationButtons">True</sys:Boolean>
+    <sys:Double x:Key="DetailsViewDescriptionHeight">110</sys:Double>
     <!--region end-->
 
     <sys:Double x:Key="PanelTopPanelSeparatorHeight">90</sys:Double>
