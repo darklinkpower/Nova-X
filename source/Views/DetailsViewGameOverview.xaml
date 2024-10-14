@@ -836,18 +836,61 @@
 
                                                 <StackPanel Grid.Column="2">
 
-                                                    <Border x:Name="VideoFeed" Visibility="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
-                                                            Style="{DynamicResource DetailsPanelRoundedBorder}">
-                                                        <!-- ExtraMetadataLoader video player -->
-                                                        <Grid VerticalAlignment="Center">
-                                                            <!--Rectangle used to expand the panel while the video loads-->
-                                                            <Viewbox Stretch="Uniform" Visibility="{Binding ElementName=VideoFeed, Path=Visibility}">
-                                                                <Rectangle Width="16" Height="9" Fill="Transparent" IsHitTestVisible="False" />
-                                                            </Viewbox>
-                                                            <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" />
-                                                        </Grid>
+                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
+                                                            Visibility="{Binding ElementName=VideoScreenshotsTabControlVisibilityProxy, Path=Tag}">
+                                                        <TabControl>
+                                                            <TabItem x:Name="VideoTabItem"
+                                                                     Header="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}"
+                                                                     Visibility="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                                <!-- ExtraMetadataLoader video player -->
+                                                                <Grid VerticalAlignment="Center" Margin="0,15,0,0">
+                                                                    <!--Rectangle used to expand the panel while the video loads-->
+                                                                    <Viewbox Stretch="Uniform" Visibility="{Binding ElementName=VideoFeed, Path=Visibility}">
+                                                                        <Rectangle Width="16" Height="9" Fill="Transparent" IsHitTestVisible="False" />
+                                                                    </Viewbox>
+                                                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" />
+
+                                                                    <TextBlock x:Name="VideoScreenshotsTabControlVisibilityProxy"
+                                                                               Visibility="Collapsed">
+                                                                        <TextBlock.Style>
+                                                                            <Style TargetType="TextBlock">
+                                                                                <Setter Property="Tag" Value="Collapsed" />
+                                                                                <Style.Triggers>
+                                                                                    <DataTrigger Binding="{Binding ElementName=VideoTabItem, Path=Visibility}" Value="Visible">
+                                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                                    </DataTrigger>
+                                                                                    <DataTrigger Binding="{Binding ElementName=SsvTabItem, Path=Visibility}" Value="Visible">
+                                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                                    </DataTrigger>
+                                                                                    <DataTrigger Binding="{Binding ElementName=SteamScreenshotsTabItem, Path=Visibility}" Value="Visible">
+                                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                                    </DataTrigger>
+                                                                                </Style.Triggers>
+                                                                            </Style>
+                                                                        </TextBlock.Style>
+                                                                    </TextBlock>
+                                                                </Grid>
+                                                            </TabItem>
+
+                                                            <TabItem x:Name="SsvTabItem"
+                                                                     Header="{DynamicResource LOCSsvTitle}"
+                                                                     Visibility="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                                <StackPanel Margin="0,15,0,0">
+                                                                    <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,0,0" />
+                                                                    <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,0,0" Height="550"/>
+                                                                </StackPanel>
+                                                            </TabItem>
+
+                                                            <TabItem x:Name="SteamScreenshotsTabItem"
+                                                                     Header="{DynamicResource LOC_SteamScreenshots_SteamScreenshotsLabel}"
+                                                                     Visibility="{PluginSettings Plugin=SteamScreenshots, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                                <StackPanel Margin="0,15,0,0">
+                                                                    <ContentControl x:Name="SteamScreenshots_SteamScreenshotsViewControl" Margin="0,10,0,0" />
+                                                                </StackPanel>
+                                                            </TabItem>
+                                                        </TabControl>
                                                     </Border>
-                                                    
+
                                                     <Border>
                                                         <Border.Style>
                                                             <Style BasedOn="{StaticResource DetailsPanelRoundedBorder}" TargetType="Border">
@@ -866,7 +909,7 @@
                                                             <StackPanel Name="PART_ElemFeatures">
                                                                 <Label Style="{DynamicResource PanelLabel}"
                                                                        Content="{DynamicResource LOCFeaturesLabel}" />
-                                                                <Grid MinHeight="45">
+                                                                <Grid Margin="0,0,0,10" MinHeight="45">
                                                                     <ItemsControl ItemsSource="{Binding Game.Features}" Margin="0,0,0,3">
                                                                         <ItemsControl.ItemsPanel>
                                                                             <ItemsPanelTemplate>
@@ -960,15 +1003,6 @@
                                                                                 Margin="0,10,0,0" />
                                                             </StackPanel>
                                                         </Border>
-                                                    </Border>
-
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
-                                                            Visibility="{PluginSettings Plugin=SteamScreenshots, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                        <StackPanel>
-                                                            <Label Style="{DynamicResource PanelLabel}"
-                                                                   Content="{DynamicResource LOC_SteamScreenshots_SteamScreenshotsLabel}" />
-                                                            <ContentControl x:Name="SteamScreenshots_SteamScreenshotsViewControl" Margin="0,10,0,0" />
-                                                        </StackPanel>
                                                     </Border>
                                                     
                                                     <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
@@ -1095,16 +1129,6 @@
                                                         </StackPanel>
                                                     </Border>
 
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
-                                                            Visibility="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                        <StackPanel>
-                                                            <Label Style="{DynamicResource PanelLabel}"
-                                                                   Content="{DynamicResource LOCSsvTitle}" />
-                                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,0,0" />
-                                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,0,0" Height="550"/>
-                                                        </StackPanel>
-                                                    </Border>
-                                                    
                                                 </StackPanel>
 
                                             </Grid>
