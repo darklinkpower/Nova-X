@@ -137,3 +137,11 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.16/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_16.pthm
     Changelog:
       - 'Details View: Fix dropshadow effect on cover image causing it to be blurry'
+  - Version: 1.17
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-10-14
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.17/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_17.pthm
+    Changelog:
+      - 'Added: Option to configure the description maximum height on Details View using the ThemeModifier extension.'
+      - 'Changed: Moved Notes to the default details tab on Details View'
+      - 'Changed: Moved video and screenshots plugin controls to a common Tab Control on Details View'
