@@ -145,3 +145,9 @@ Packages:
       - 'Added: Option to configure the description maximum height on Details View using the ThemeModifier extension.'
       - 'Changed: Moved Notes to the default details tab on Details View'
       - 'Changed: Moved video and screenshots plugin controls to a common Tab Control on Details View'
+  - Version: 1.18
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-06
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.18/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_18.pthm
+    Changelog:
+      - 'Added: Game cover banners for library plugins: ATLauncher Instance Library, Big Fish Games library integration, EmuLibrary, Fanatical library integration, Game Jolt library integration, GameVault Library Integration, GOG OSS library integration, Google Play Games on PC Library, Humble Keys Library, LANCommander library integration, Meta Quest/Oculus Library Plugin, MultiMC Library Importer, Nile (Amazon) library integration, NowPlaying Game Cacher, RAWG library importer, RobotCache library integration, RomM Library Importer, Viveport library importer.'
