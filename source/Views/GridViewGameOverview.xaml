@@ -65,8 +65,12 @@
                                 </Grid>
                                 <DockPanel DockPanel.Dock="Top">
                                     <Image Name="PART_ImageIcon" DockPanel.Dock="Left" MaxHeight="32" MaxWidth="32"
-                                           RenderOptions.BitmapScalingMode="Fant" Margin="0,0,10,0" />
-                                    <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
+                                           RenderOptions.BitmapScalingMode="Fant" Margin="0,0,10,0">
+                                        <Image.Clip>
+                                            <RectangleGeometry RadiusX="4" RadiusY="4" Rect="0,0,32,32" />
+                                        </Image.Clip>
+                                    </Image>
+                                        <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
                                                     Visibility="{PluginSettings Plugin=NewsViewer, Path=PlayersCountAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
                                                     DockPanel.Dock="Right" VerticalAlignment="Center">
                                         <ContentControl.Resources>
