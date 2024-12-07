@@ -176,7 +176,11 @@
                                                         <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
                                                     </ContentControl.Resources>
                                                 </ContentControl>
-
+                                                
+                                                <ContentControl x:Name="GogSecondClassWatcher_SecondClassWatcherControl"
+                                                            VerticalAlignment="Center"
+                                                            Visibility="{PluginSettings Plugin=GogSecondClassWatcher, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                            Margin="0,0,10,0"/>
                                             </WrapPanel>
 
                                             <DockPanel Grid.Row="1" Name="PART_ElemDevelopers"
