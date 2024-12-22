@@ -861,6 +861,15 @@
                                                         </Grid>
                                                     </Border>
 
+                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
+                                                            Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                        <StackPanel Margin="0,15,0,0">
+                                                            <Label Style="{DynamicResource PanelLabel}"
+                                                                   Content="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}" />
+                                                            <ContentControl x:Name="NewsViewer_NewsViewerControl" Margin="0,5,0,5" FontWeight="Normal"/>
+                                                        </StackPanel>
+                                                    </Border>
+                                                    
                                                     <Border>
                                                         <Border.Style>
                                                             <Style TargetType="Border">
@@ -893,16 +902,7 @@
                                                             </StackPanel>
                                                         </Border>
                                                     </Border>
-                                                    
-                                                    <Border Style="{DynamicResource DetailsPanelRoundedBorder}"
-                                                            Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                        <StackPanel Margin="0,15,0,0">
-                                                            <Label Style="{DynamicResource PanelLabel}"
-                                                                   Content="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}" />
-                                                            <ContentControl x:Name="NewsViewer_NewsViewerControl" Margin="0,5,0,5" FontWeight="Normal"/>
-                                                        </StackPanel>
-                                                    </Border>
-                                                    
+
                                                 </StackPanel>
 
                                                 <StackPanel Grid.Column="2">
