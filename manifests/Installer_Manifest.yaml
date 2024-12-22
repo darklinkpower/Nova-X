@@ -171,3 +171,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.21/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_21.pthm
     Changelog:
       - 'Added: Support to display GOG Second Class Watcher extension data on Details View and Grid View'
+  - Version: 1.22
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-12-21
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.22/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_22.pthm
+    Changelog:
+      - 'Details View: Moved News Viewer extension news panel to make it more easily noticeable when information is available'
