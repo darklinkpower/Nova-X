@@ -29,9 +29,17 @@
                             <Border Background="{DynamicResource NoiseBrush}"
                                     Opacity="{DynamicResource PanelsNoiseBackgroundOpacity}"/>
                             <Grid Margin="{DynamicResource PanelTopPanelSeparator}">
-                                <DockPanel Margin="5,0,5,10">
-                                    <ComboBox Name="PART_SelectFields"
-                                              DockPanel.Dock="Top" Margin="0" />
+                                <DockPanel Margin="8,0,8,10">
+                                    <DockPanel DockPanel.Dock="Top" LastChildFill="True"
+                                               Margin="0,8,0,8">
+                                        <Button Content="r" FontFamily="Marlett" 
+	  		                                    Style="{StaticResource SimpleButton}" 
+	  		                                    DockPanel.Dock="Right" Margin="0,0,5,0" 
+	  		                                    VerticalAlignment="Center" 
+	  		                                    Name="PART_ButtonClose"/>
+                                        <ComboBox Name="PART_SelectFields" MaxDropDownHeight="Auto"
+                                                  DockPanel.Dock="Left" Margin="0,0,8,0" />
+                                    </DockPanel>
                                     <ListBox Name="PART_SelectItems"
                                              DockPanel.Dock="Top" Margin="0,10,0,0"                                      
                                              BorderThickness="0" Background="Transparent"
