@@ -189,3 +189,12 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.24/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_24.pthm
     Changelog:
       - 'Update to theme changes in Playnite v10.36'
+  - Version: 1.25
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-06-21
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.25/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_25.pthm
+    Changelog:
+      - 'Details View: Fix ExtraMetadataLoader settings to adjust logo positioning not working'
+      - 'Details View: Fix header height inconsistency when switching games with different logo sizes and the cover Height setting is too large'
+      - 'Top Panel: Added option to configure the width of the search box'
+      - 'Note: Added options can be configured using the ThemeModifier extension'
