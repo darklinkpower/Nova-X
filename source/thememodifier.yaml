@@ -1,6 +1,7 @@
 Constants:
     - "Top Panel"
     - ShowNavigationButtons: 'Show navigation buttons'
+    - TopPanelSearchBoxWidthNova(80,600): 'Width of Search box'
     - "Details View"
     - DetailsViewDescriptionMaxHeight(110,700): 'Description Maximum Height'
     - DetailsViewBlurGameBackgroundImage: 'Blur game background image'
