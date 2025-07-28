@@ -20,7 +20,7 @@
                                    Margin="-17,0,0,0"/>
             
                         <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Column="1" Grid.Row="0"
-                                   Margin="-17,0,0,0"
+                                   Margin="-17,10,2,10"
                                    Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
                                    Value="{Binding Path=VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
                                    ViewportSize="{TemplateBinding ViewportHeight}"
