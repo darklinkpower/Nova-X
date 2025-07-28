@@ -70,3 +70,137 @@ Packages:
       - 'Details View: Remove dropshadow effect from game name'
       - 'TabControl: Make tab items borders rounded'
       - 'Window: Use rounded corners in windows and visual changes to window buttons'
+  - Version: 1.8
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-30
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.8/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_8.pthm
+    Changelog:
+      - 'Added: Legendary library plugin banner'
+      - 'Improved: performance when rounded corners are enabled'
+      - 'Improved: Tray icon rendering quality'
+      - 'Changed: Make unfavorite icon in game menu yellow'
+  - Version: 1.9
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-11-10
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.9/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_9.pthm
+    Changelog:
+      - 'Added: Support for Game Relations extension'
+  - Version: 1.10
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-12-09
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.10/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_10.pthm
+    Changelog:
+      - 'Added: Button to toggle favorite status in game details when using the ThemeExtras extension.'
+      - 'Added: Dropdown menu in game details to change the completion status when using the ThemeExtras extension.'
+      - 'Added: Display website iconsnext to links on game details when using the ThemeExtras extension.'
+      - 'Added: Navigation buttons in TopPanel when using the ThemeExtras extension. Can be disabled with ThemeModifier extension.'
+  - Version: 1.11
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-03-17
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.11/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_11.pthm
+    Changelog:
+      - 'Changed: Added rounded corners to EML video player'
+      - 'Changed: Changed default cover image aspect ratio to 2:3'
+  - Version: 1.12
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-05-28
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.12/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_12.pthm
+    Changelog:
+      - 'Added: support for panel of VNDB Nexus extension. Note: if there is overlap of extension sections, reset the order with the ThemeModifier extension options.'
+      - 'Changed: Made progress bar of items in the sidebar smaller'
+  - Version: 1.13
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-05-28
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.13/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_13.pthm
+    Changelog:
+      - 'Added: Support for Steam Screenshots extension'
+  - Version: 1.14
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-21
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.14/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_14.pthm
+    Changelog:
+      - 'Details View: Fix center separator having different width in details and addons tabs'
+      - 'Details View: Fix score numbers not being aligned to other elements'
+      - 'Details View: Improve margin inside panels with wrappanels'
+      - 'Fixed: HLTB rows showing even if they have no data after its latest update'
+      - 'Reorder ThemeModifier extension sections'
+  - Version: 1.15
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-26
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.15/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_15.pthm
+    Changelog:
+      - 'Details View: Added support for BackgroundChanger extension background image'
+      - 'Details View: Fix panels beings displayed when inner elements are not visible'
+  - Version: 1.16
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-28
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.16/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_16.pthm
+    Changelog:
+      - 'Details View: Fix dropshadow effect on cover image causing it to be blurry'
+  - Version: 1.17
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-10-14
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.17/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_17.pthm
+    Changelog:
+      - 'Added: Option to configure the description maximum height on Details View using the ThemeModifier extension.'
+      - 'Changed: Moved Notes to the default details tab on Details View'
+      - 'Changed: Moved video and screenshots plugin controls to a common Tab Control on Details View'
+  - Version: 1.18
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-06
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.18/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_18.pthm
+    Changelog:
+      - 'Added: Game cover banners for library plugins: ATLauncher Instance Library, Big Fish Games library integration, EmuLibrary, Fanatical library integration, Game Jolt library integration, GameVault Library Integration, GOG OSS library integration, Google Play Games on PC Library, Humble Keys Library, LANCommander library integration, Meta Quest/Oculus Library Plugin, MultiMC Library Importer, Nile (Amazon) library integration, NowPlaying Game Cacher, RAWG library importer, RobotCache library integration, RomM Library Importer, Viveport library importer.'
+  - Version: 1.19
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-13
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.19/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_19.pthm
+    Changelog:
+      - 'Added: Game cover banner for Riot Games Library plugin'
+      - 'Added: Support to use web view component from Web Explorer extension'
+  - Version: 1.20
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-22
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.20/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_20.pthm
+    Changelog:
+      - 'Added: Star ratings from 0 to 5 will now be displayed alongside the critic, user and community numerical scores, providing a clearer visual representation of the game ratings'
+      - 'Changed: Icons on Details View & Grid View will now be displayed with rounded corners'
+  - Version: 1.21
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-12-06
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.21/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_21.pthm
+    Changelog:
+      - 'Added: Support to display GOG Second Class Watcher extension data on Details View and Grid View'
+  - Version: 1.22
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-12-21
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.22/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_22.pthm
+    Changelog:
+      - 'Details View: Moved News Viewer extension news panel to make it more easily noticeable when information is available'
+  - Version: 1.23
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2025-05-30
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.23/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_23.pthm
+    Changelog:
+      - 'Updated ThemeExtras game banners: Added banners for Stove and Hikari Field Importer library plugins, added Microsoft Store source banner, and recreated Steam banner to reduce color banding and blurriness.'
+  - Version: 1.24
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-06-13
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.24/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_24.pthm
+    Changelog:
+      - 'Update to theme changes in Playnite v10.36'
+  - Version: 1.25
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-06-21
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.25/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_25.pthm
+    Changelog:
+      - 'Details View: Fix ExtraMetadataLoader settings to adjust logo positioning not working'
+      - 'Details View: Fix header height inconsistency when switching games with different logo sizes and the cover Height setting is too large'
+      - 'Top Panel: Added option to configure the width of the search box'
+      - 'Note: Added options can be configured using the ThemeModifier extension'
+  - Version: 1.26
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-07-12
+    PackageUrl: https://github.com/darklinkpower/Nova-X/releases/download/1.26/Nova_X_0a95b7a3-00e4-412d-b301-f2fa3f98dfad_1_26.pthm
+    Changelog:
+      - 'Changed: Moved all addons elements to the main tab on Details View.'

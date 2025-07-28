@@ -11,8 +11,33 @@ I make extensions and themes to learn, have fun and to give to the community so 
 
 ## Support
 
-- If you found a bug or want to request a feature, please open a new issue in the [Issues Tracker](https://github.com/darklinkpower/Nova-X/issues)
-- For general support, please contact me in the channel dedicated to themes support in the [Playnite Discord](https://discord.com/channels/365863063296933888/808419347105447957)
+If you encounter a bug or need help with an issue related to the project, please open a new issue in the [Issues Tracker](https://github.com/darklinkpower/Stardust/issues).
+
+Before submitting:
+- **Search for existing issues** to avoid duplicates and speed up resolution.
+- Consider whether the feature could already be achieved through Playnite's built-in settings or the [ThemeModifier plugin](https://playnite.link/addons.html#playnite-thememodifier-plugin).
+- When reporting bugs, provide detailed information (Playnite version, theme version, logs, screenshots, etc.) to help with troubleshooting.
+
+## Feature Requests
+
+If you have a new idea or feature suggestion, feel free to submit it via the [Issues Tracker](https://github.com/darklinkpower/Nova-X/issues).
+
+Before submitting:
+- **Search for existing requests** to ensure your suggestion hasn't already been made.
+- Consider whether the feature could already be achieved through Playnite's built-in settings or the [ThemeModifier plugin](https://playnite.link/addons.html#playnite-thememodifier-plugin).
+- Clearly explain the feature, its benefits, and how it could improve the theme for most users.
+
+#### A Note on Feature Requests
+
+I truly appreciate everyone who enjoys using my themes and shares feedback. Due to time constraints and the significant effort I already invest in these projects in my free time, I focus on changes that benefit the majority of users.
+
+Personalized adjustments, while appealing, require considerable time and effort to implement and maintain and can increase complexity. This increases the ongoing work with each update, making it harder for me to manage the project in the long run. Because of this, I prioritize features with broad utility.
+
+For niche or highly specific requests (e.g., moving/removing elements or making tailored changes), I encourage you to try making these modifications yourself. While I understand not everyone may have the knowledge or experience, I want to highlight that I'm not a programmer but I've self-taught everything I know to work on my projects. Unfortunately, due to time constraints, I'm unable to dedicate the time needed to teach these modifications, but with some effort, it's definitely possible to learn and implement them on your own.
+
+I'm sorry if your request is denied for this reason, and I hope you can understand.
+
+Thank you for your support.
 
 ## Theme goals
 - Use Xbox PC app UI as inspiration to create a polished Playnite UI.
@@ -51,10 +76,17 @@ The theme provides extensive support for a wide range of available Playnite exte
 
 ...and more...
 
+## Configuring the theme
+
+The theme provides extensive customization options that go beyond what is normally available in Playnite.
+
+- **General settings:** Customize various elements using the [ThemeModifier](https://playnite.link/addons.html#playnite-thememodifier-plugin) extension.
+- **Grid View layout:** Use the Details View layout in Grid View with the [Details to Grid View Converter](https://playnite.link/addons.html#ThemesDetailsViewToGridViewConverter_ef8a7226-eedc-478d-a506-92ee6c088aa3) extension.
+
 ## Screenshots
 
 <details>
-<summary>Settings used in screenshots (Click to expand)</summary>
+<summary>Click to view the appearance settings used in these screenshots</summary>
 
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Nova-X/master/screenshots/settings_01.jpg)

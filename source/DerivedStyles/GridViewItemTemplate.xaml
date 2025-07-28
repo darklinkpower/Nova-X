@@ -32,87 +32,101 @@
                 <ControlTemplate TargetType="{x:Type GameListItem}">
                     <Border BorderThickness="{Settings GridItemMargin}" BorderBrush="{DynamicResource ButtonBackgroundBrush}"
                             Background="Transparent"
-                            CornerRadius="{DynamicResource GridViewCoverCornerRadius}" >
+                            CornerRadius="{DynamicResource GridViewCoverCornerRadius}">
+
                         <StackPanel Name="PART_PanelHost" Width="{Settings GridItemWidth}"
                                     d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
-                            <Grid Width="{Settings GridItemWidth}">
-                                <Grid.Style>
-                                    <Style TargetType="Grid">
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding ElementName=Mask, Path=Tag}" Value="True">
-                                                <Setter Property="OpacityMask">
-                                                    <Setter.Value>
-                                                        <VisualBrush Visual="{Binding ElementName=Mask}"/>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Grid.Style>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="{Binding ElementName=ThemeExtras_Banner, Path=Height, TargetNullValue=0, FallbackValue=0}" />
-                                    <RowDefinition Height="{Settings GridItemHeight}" />
-                                </Grid.RowDefinitions>
-                                <Border Grid.RowSpan="2" Style="{StaticResource VisualBrushBorderMask}" Name="Mask"
-                                            Tag="{DynamicResource GridViewCoverUseRoundedCorners}" />
-                                <ContentControl x:Name="ThemeExtras_Banner"
-                                                    RenderOptions.BitmapScalingMode="Fant"
-                                                    Width="{Binding Width, ElementName=PART_ImageCover}"
-                                                    Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}"
-                                                    Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
-                                                    Visibility="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                <Image Name="PART_ImageCover" Grid.Row="1"
+                            <Grid>
+                                <Border Style="{StaticResource VisualBrushBorderMask}" Name="Mask"
+                                        Tag="{DynamicResource GridViewCoverUseRoundedCorners}" />
+                                <StackPanel>
+                                    <StackPanel.Style>
+                                        <Style TargetType="StackPanel">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=Mask, Path=Tag}" Value="True">
+                                                    <Setter Property="OpacityMask">
+                                                        <Setter.Value>
+                                                            <VisualBrush Visual="{Binding ElementName=Mask}"/>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </StackPanel.Style>
+                                    <ContentControl x:Name="ThemeExtras_Banner"
+                                                RenderOptions.BitmapScalingMode="Fant"
+                                                Width="{Binding Width, ElementName=PART_ImageCover}"
+                                                Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}"
+                                                HorizontalAlignment="Center"
+                                                Visibility="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                    <Image Name="PART_ImageCover" Height="{Settings GridItemHeight}"
+                                           SnapsToDevicePixels="True"
                                            RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                            HorizontalAlignment="Center" VerticalAlignment="Top"
                                            Stretch="{Settings CoverArtStretch}" />
-                                <Grid Grid.RowSpan="2">
-                                    <Border Background="#99000000" x:Name="TextGameName" Visibility="Collapsed">
-                                        <TextBlock Text="{Binding DisplayName}"
-                                                       TextWrapping="Wrap" Margin="5"
-                                                       Style="{StaticResource BaseTextBlockStyle}"
-                                                       TextTrimming="CharacterEllipsis" TextAlignment="Center"
-                                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Border>
-                                    <Border Background="#000000" x:Name="BorderMouseOver" Visibility="Collapsed" Opacity="0.80" IsHitTestVisible="False" />
-                                    <Border x:Name="GlowPlayingBorder" Visibility="Collapsed" Tag="False" IsHitTestVisible="False"
-                                            Style="{DynamicResource CoverIsPlayingAnimatedBackground}" />
-                                    <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed" IsHitTestVisible="False"
-                                               Tag="{DynamicResource GridViewEnablePlayingGlowBorder}" />
-                                    <Border Name="ShineBackground" Tag="False" IsHitTestVisible="False"
-                                            Style="{DynamicResource AnimatedCoverShineBackground}" />
-                                    <TextBlock Name="EnableHighlightAnimation" Visibility="Collapsed" IsHitTestVisible="False"
-                                               Tag="{DynamicResource GridViewEnableCoverShineAnimation}" />
-                                </Grid>
-                                <Border Grid.Row="1" Background="{DynamicResource CoversButtonsBrush}" x:Name="BorderDarkFade" Visibility="Collapsed" />
-                                <TextBlock Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" ClipToBounds="True"
-                                                   Text="&#xE113;" FontFamily="Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}"
-                                                        Opacity="0.90" FontSize="16"
-                                                        Margin="8,5,5,5"
-                                                        DockPanel.Dock="Right"
-                                                        Tag="{DynamicResource GridViewLibraryGameShowFavorite}">
-                                    <TextBlock.Style>
-                                        <Style TargetType="TextBlock" >
-                                            <Setter Property="Visibility" Value="Collapsed" />
-                                            <Style.Triggers>
-                                                <MultiDataTrigger>
-                                                    <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{Binding Favorite}" Value="True" />
-                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
-                                                    </MultiDataTrigger.Conditions>
-                                                    <Setter Property="Visibility" Value="Visible" />
-                                                    <Setter Property="Effect">
-                                                        <Setter.Value>
-                                                            <DropShadowEffect RenderingBias="Performance"
+
+                                </StackPanel>
+
+
+                                <Border Background="#99000000" x:Name="TextGameName" Visibility="Collapsed"
+                                            CornerRadius="{Binding ElementName=Mask, Path=CornerRadius}">
+                                    <TextBlock Text="{Binding DisplayName}"
+                                                    TextWrapping="Wrap" Margin="5"
+                                                    Style="{StaticResource BaseTextBlockStyle}"
+                                                    TextTrimming="CharacterEllipsis" TextAlignment="Center"
+                                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <Border Background="#000000" CornerRadius="{Binding ElementName=Mask, Path=CornerRadius}"
+                                        x:Name="BorderMouseOver" Visibility="Collapsed" Opacity="0.70" />
+                                <Border x:Name="GlowPlayingBorder" Visibility="Collapsed" Tag="False"
+                                        CornerRadius="{Binding ElementName=Mask, Path=CornerRadius}"
+                                        Style="{DynamicResource CoverIsPlayingAnimatedBackground}" />
+                                <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed"
+                                           Tag="{DynamicResource GridViewEnablePlayingGlowBorder}" />
+                                <Border Name="ShineBackground" Tag="False" IsHitTestVisible="False"
+                                        CornerRadius="{Binding ElementName=Mask, Path=CornerRadius}"
+                                        Style="{DynamicResource AnimatedCoverShineBackground}" />
+                                <TextBlock Name="EnableHighlightAnimation" Visibility="Collapsed"
+                                           Tag="{DynamicResource GridViewEnableCoverShineAnimation}" />
+
+                                <Border Background="{DynamicResource CoversButtonsBrush}"
+                                        CornerRadius="{Binding ElementName=Mask, Path=CornerRadius}"
+                                        x:Name="BorderDarkFade" Visibility="Collapsed" />
+                                <StackPanel>
+                                    <Border Height="{Binding ElementName=ThemeExtras_Banner, Path=ActualHeight}"
+                                            Visibility="{Binding ElementName=ThemeExtras_Banner, Path=Visibility}" />
+                                    <TextBlock Text="&#xE113;" FontFamily="Segoe MDL2 Assets"
+                                               Foreground="{DynamicResource TextBrush}"
+                                               Opacity="0.90" FontSize="16"
+                                               Margin="8,5,5,5"
+                                               VerticalAlignment="Top"
+                                               HorizontalAlignment="Right"
+                                               Tag="{DynamicResource GridViewLibraryGameShowFavorite}">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock" >
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                <Style.Triggers>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Favorite}" Value="True" />
+                                                            <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Visibility" Value="Visible" />
+                                                        <Setter Property="Effect">
+                                                            <Setter.Value>
+                                                                <DropShadowEffect RenderingBias="Performance"
                                                                               BlurRadius="6" ShadowDepth="0" Color="#000000" />
-                                                        </Setter.Value>
-                                                    </Setter>
-                                                </MultiDataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </TextBlock.Style>
-                                </TextBlock>
-                                <Viewbox Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                                                    Name="GameControls"  Visibility="Collapsed">
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </MultiDataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </StackPanel>
+
+                                <Viewbox VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                                                 Name="GameControls"  Visibility="Collapsed">
                                     <StackPanel Orientation="Horizontal">
                                         <Button Name="PART_ButtonPlay" Style="{StaticResource SimpleButton}"
                                                 Margin="20,0,2,5" VerticalAlignment="Center"
@@ -124,21 +138,31 @@
                                 </Viewbox>
                             </Grid>
 
-                            <Border x:Name="ShowGameNameBorder" Background="Transparent" Grid.Row="1" CornerRadius="0">
+                            <Border x:Name="ShowGameNameBorder" Background="Transparent"
+                                    Visibility="{Settings ShowNamesUnderCovers}">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="0" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=Mask, Path=Tag}" Value="True">
+                                                <Setter Property="CornerRadius" Value="{DynamicResource GridViewShowGameNameCornerRadius}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
                                 <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
-                                               Style="{StaticResource BaseTextBlockStyle}"    
-                                               Foreground="White"
-                                               TextAlignment="Left" TextTrimming="CharacterEllipsis"
-                                               FontWeight="Medium"
-                                               VerticalAlignment="Center"
-                                               Width="{Settings GridItemWidth}"
-                                               Padding="2,8,2,3"
-                                               Visibility="{Settings ShowNamesUnderCovers}" />
+                                           Foreground="{DynamicResource TextBrush}"
+                                           Style="{DynamicResource BaseTextBlockStyle}"                                                                   
+                                           TextAlignment="Center" TextTrimming="CharacterEllipsis"
+                                           VerticalAlignment="Center"
+                                           Padding="2,5,2,5" Grid.Row="1" Grid.Column="0"
+                                           Width="{Settings GridItemWidth}" />
                             </Border>
 
-                            <DockPanel Width="{Settings GridItemWidth}" Visibility="{DynamicResource GridViewCoverSubtitleVisibility}">
-                                <TextBlock Text="&#xEEDC;" FontSize="{DynamicResource FontSizeSmall}"
-                                           FontFamily="{StaticResource FontIcoFont}"
+                            <DockPanel Width="{Settings GridItemWidth}"
+                                        Visibility="{DynamicResource GridViewCoverSubtitleVisibility}">
+                                <TextBlock Text="&#xE121;" FontSize="{DynamicResource FontSizeSmall}"
+                                           FontFamily="Segoe MDL2 Assets"
                                            TextAlignment="Left" VerticalAlignment="Center"
                                            Padding="2,4,2,5" Margin="0,0,0,-2"
                                            Foreground="{DynamicResource GridViewCoverSubtitleBrush}" />
@@ -150,19 +174,24 @@
                                            VerticalAlignment="Center"
                                            Padding="3,4,2,2" />
                             </DockPanel>
-                            <DockPanel Width="{Settings GridItemWidth}" Visibility="{DynamicResource GridViewCoverCompStatusSubtitleVisibility}">
+                            <DockPanel Width="{Settings GridItemWidth}"
+                                        Tag="{DynamicResource GridViewCoverCompStatusSubtitleVisibility}">
                                 <DockPanel.Style>
                                     <Style TargetType="DockPanel">
                                         <Setter Property="Visibility" Value="Visible" />
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Game.CompletionStatus}" Value="{x:Null}">
+                                            <DataTrigger Binding="{Binding CompletionStatus.Name, TargetNullValue='', FallbackValue=''}" Value=''>
                                                 <Setter Property="Visibility" Value="Hidden" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="Collapsed">
+                                                <Setter Property="Visibility" Value="Collapsed" />
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </DockPanel.Style>
-                                <TextBlock Text="&#xEC74;" FontSize="{DynamicResource FontSizeSmall}"
-                                           FontFamily="{StaticResource FontIcoFont}"
+
+                                <TextBlock Text="&#xE102;" FontSize="{DynamicResource FontSizeSmall}"
+                                           FontFamily="Segoe MDL2 Assets"
                                            TextAlignment="Left" VerticalAlignment="Center"
                                            Padding="2,4,2,5" Margin="0,0,0,-2"
                                            Foreground="{DynamicResource GridViewCoverSubtitleBrush}" />

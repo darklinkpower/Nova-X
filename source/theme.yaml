@@ -1,8 +1,8 @@
-ThemeApiVersion: 2.5.0
-Id: NovaZ
-Name: NovaZ
+ThemeApiVersion: 2.8.0
+Id: Nova_Z
+Name: Nova Z
 Author: darklinkpower
-Version: 1.7
+Version: 1.26
 Links:
 - Name: GitHub
   Url: https://github.com/darklinkpower/Nova-X

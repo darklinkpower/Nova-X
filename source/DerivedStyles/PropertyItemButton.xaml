@@ -26,7 +26,30 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
+    
+    <Style x:Key="PropertyItemLinkButton" TargetType="Button" BasedOn="{StaticResource PropertyItemButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <DockPanel>
+                        <Viewbox DockPanel.Dock="Left" Margin="0,0,5,0" Width="18" Height="18"
+                                 VerticalAlignment="Center"
+                                 Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                 RenderOptions.ClearTypeHint="Enabled" RenderOptions.BitmapScalingMode="Fant">
+                            <ContentControl Content="{Binding Value, TargetNullValue={StaticResource LinksIcon}}"
+                                            DataContext="{Binding Url, Converter={PluginConverter Plugin=ThemeExtras, Converter=UrlToAsyncIconConverter}}"/>
+                        </Viewbox>
+                        <TextBlock DockPanel.Dock="Left" FontSize="{TemplateBinding FontSize}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   Text="{TemplateBinding Content, Converter={StaticResource ObjectToStringConverter}}"
+                                   Style="{DynamicResource HoverNoUnderlineStyle}"
+                                   TextWrapping="Wrap"/>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style TargetType="TextBlock" x:Key="HoverNoUnderlineStyle">
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="False">
@@ -71,4 +94,37 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style x:Key="PropertyItemLinkRoundedPanelButton" TargetType="Button" BasedOn="{StaticResource PropertyItemRoundedPanelButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Margin="{TemplateBinding Margin}">
+                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" CornerRadius="12">
+                            <DockPanel>
+                                <Viewbox DockPanel.Dock="Left" Margin="0,0,5,0" Width="18" Height="18"
+                                         VerticalAlignment="Center"
+                                         Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                         RenderOptions.ClearTypeHint="Enabled" RenderOptions.BitmapScalingMode="Fant">
+                                    <ContentControl Content="{Binding Value, TargetNullValue={StaticResource LinksIcon}}"
+                                                    DataContext="{Binding Url, Converter={PluginConverter Plugin=ThemeExtras, Converter=UrlToAsyncIconConverter}}"/>
+                                </Viewbox>
+                                <TextBlock DockPanel.Dock="Left" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}"
+                                           Foreground="{TemplateBinding Foreground}"
+                                           Text="{TemplateBinding Content, Converter={StaticResource ObjectToStringConverter}}"
+                                           TextWrapping="NoWrap"/>
+                            </DockPanel>
+
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True" >
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
 </ResourceDictionary>
